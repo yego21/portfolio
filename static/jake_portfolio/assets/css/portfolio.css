@@ -1,0 +1,16 @@
+.portfolio .portfolio_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.portfolio .portfolio_image img {
+    max-width: 200px;
+    height: auto;
+}
+
+.portfolio .portfolio_description {
+  padding: 20px;
+  border: 1px solid #c
+}
