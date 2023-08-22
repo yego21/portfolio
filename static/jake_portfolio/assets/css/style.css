@@ -929,6 +929,28 @@ section .container {
   right: 15px;
 }
 
+/* Button Style */
+button .popup-body .portfolio-container .green-underline-button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #00a859;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+button .popup-body .portfolio-container .green-underline-button:hover {
+  border-color: #006b3e;
+}
+
+/* Optional: Add some spacing around the button */
+.button-container {
+  margin: 20px;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/

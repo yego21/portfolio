@@ -6,3 +6,6 @@ def index(request):
     
 def portfolio_details(request):
     return render(request, "jake_portfolio/portfolio-details.html")
+
+def py_scripts(request):
+    return render(request, "jake_portfolio/py_scripts.html")
