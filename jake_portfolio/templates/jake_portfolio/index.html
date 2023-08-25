@@ -30,7 +30,7 @@
   <link href="{% static 'jake_portfolio/assets/css/portfolio.css' %}" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
 
 
   <!-- =======================================================
@@ -265,7 +265,7 @@
 
       <div class="row">
         <div class="col-lg-6">
-          <h3 class="resume-title">Sumary</h3>
+          <h3 class="resume-title">Summary</h3></br></br>
           <div class="resume-item pb-0">
             <h4>Jake Villamor</h4>
             <p><em>Works well independently, or in a group setting. Can provide facets of computer support such as troubleshooting, installations,
@@ -281,7 +281,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
             </p>
           </div>
 
-          <h3 class="resume-title">Education</h3>
+          <h3 class="resume-title">Education</h3></br></br>
           <div class="resume-item">
             <h4>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</h4>
             <h5>2007-2011</h5>
@@ -289,7 +289,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
           </div>
         </div>
         <div class="col-lg-6">
-          <h3 class="resume-title">Previous Work Experience</h3>
+          <h3 class="resume-title">Previous Work Experience</h3></br></br>
           <div class="resume-item">
             <h4>Production Associate</h4>
             <h5>2011 - 2013</h5>
@@ -403,9 +403,10 @@ handling skills. Willing to be trained and eager to learn.</em></p>
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter=".filter-web" class="filter-active">Web</li>
-            <li data-filter=".filter-game_dev">Game Dev</li>
+            <li data-filter=".filter-python">Python</li>
+            <li data-filter=".filter-others">Others</li>
               <!-- <a href="{% url 'jake_portfolio:py_scripts' %}"> -->
-          <li data-filter=".filter-others">Others</li>
+
 
           </ul>
         </div>
@@ -474,11 +475,8 @@ handling skills. Willing to be trained and eager to learn.</em></p>
         <center><h4>Visit the website here: <a href="https://carzone-p58h.onrender.com">carzone-p58h.onrender.com</a></h4></center>
     </div>
 
-    <div class="col-lg-12 col-md-12 portfolio-item filter-game_dev">
-    </div>
 
-
-    <div class="col-lg-12 col-md-12 portfolio-item filter-others">
+    <div class="col-lg-12 col-md-12 portfolio-item filter-python">
         <style>
           .popup-body {
             font-family: Arial, sans-serif;
@@ -486,9 +484,9 @@ handling skills. Willing to be trained and eager to learn.</em></p>
 
           /* Styles for the popup overlay */
 
-          @media (max-width: 500px) {
+          @media (max-width: 750px) {
               .popup-overlay .popup-content {
-                  width: 50%;
+                  width: 70%;
                 }
               }
 
@@ -536,7 +534,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
             display: inline-block;
             padding: 5px 10px;
             font-size: 16px;
-            color: #ffffff;
+            color: #e1e2e6;
             background-color: transparent;
             border: none;
             border-bottom: 2px solid #00a859;
@@ -577,6 +575,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
 
           h3 {
             display: inline;
+            color: #e1e2e6;
           }
 
           pre {
@@ -584,12 +583,28 @@ handling skills. Willing to be trained and eager to learn.</em></p>
             color: #f7f5f0;
           }
 
+          .intro {
+            font-family: "Open Sans", sans-serif;
+            color: #f7f5f0;
+          }
+
 
 
         </style>
 
+
+    <div class="col-lg-12 col-md-12 portfolio-item filter-others">
+    </div>
+
+
+    <div class="intro">
+      <p>Hello, this page contains scripts that I made as part of a cybersecurity course while also having to advance my Python skills and knowledges. Everything is straight out from the course except the "File Getter" script in which I made to apply and test what I've learned. Absolutely none of these scripts are made with a malicious intent and was and will never be used in such causes. Furthermore, I will never entertain any form of request from anyone asking my service that will serve for any inappropriate purposes. Thank you very much.</p>
+
+      <p>Video demos will be added soon, you can click the file buttons to view the raw python script codes.</p>
+
+    </div></br><hr>
 <center>
-  <h3 id="python">Python</h3><h3> Scripts</h3></br></br></br>
+  <h3 id="python">Python</h3><h3> Scripts</h3></br></br>
 
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe1" data-popup-id="popup1">MAC Address Changer (Linux)</button>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe2" data-popup-id="popup2">Network Scanner</button>
@@ -599,7 +614,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
   <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe6" data-popup-id="popup6">Port Listener</button>
   <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe6" data-popup-id="popup6">Remote Backdoor</button>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe7" data-popup-id="popup7">Keylogger (via email report)</button>
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup8">File Getter/Stealer</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup8">File Getter</button>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe9" data-popup-id="popup9">Vulnerability Scanner</button></br></br>
 </center>
 

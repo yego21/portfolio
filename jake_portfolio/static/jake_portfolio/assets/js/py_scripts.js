@@ -65,12 +65,23 @@
 
   preElements.forEach(preElement => {
     const content = preElement.textContent;
-    const updatedContent = content.replace(/"([^"]*)"/g, '<span class="quoted">$&</span>');
-    preElement.innerHTML = updatedContent;
 
-    // const match1 = content.match(def_regex);
-    // const match2 = content.match(class_regex);
-    //
+    const lines = content.split('\n');
+    const processedLines = lines.map(line => {
+      if (line.trim().startsWith('#')) {
+        return `<span class='commented'>${line}</span>`;
+      } else {
+        return line;
+      }
+    });
+
+
+    const updatedContent1 = processedLines.join('\n');
+    const combinedContent = updatedContent1.replace(/"([^"]*)"/g, '<span class="quoted">$&</span>');
+    preElement.innerHTML = combinedContent;
+
+
+
     let match, match1;
     while ((match = def_regex.exec(content)) !== null) {
       const functionName = match[1];
@@ -84,11 +95,6 @@
       console.log(match1)
     }
 
-  // preElements.forEach((preElement, index) => {
-  //   match1[1].forEach(function_name => {
-  //     const regex1 = new RegExp(`\\b${function_name}\\b`, 'gi');
-  //     preElement.innerHTML = preElement.innerHTML.replace(regex1, match => `<span class="name_colors">${match}</span>`);
-  //   })
 
     wordsToMatch.forEach(word => {
       const regex = new RegExp(`\\b${word}\\b`, 'gi');
@@ -100,14 +106,6 @@
       preElement.innerHTML = preElement.innerHTML.replace(regex, match => `<span class="name_colors">${match}</span>`);
 
     });
-
-
-
-
-    // brackets.forEach(word => {
-    //   const regex = new RegExp(`\\b${word}\\b`, 'gi');
-    //   preElement.innerHTML = preElement.innerHTML.replace(regex, match => `<span class="name_colors">${match}</span>`);
-    // });
   });
 
 
@@ -126,6 +124,10 @@
 
     .quoted {
       color: #61e86a;
+    }
+
+    .commented {
+      color: #878a96;
     }
   `;
 
