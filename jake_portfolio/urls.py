@@ -5,5 +5,7 @@ from . import views
 app_name = "jake_portfolio"
 urlpatterns = [
     path("", views.index, name="index"),  
-    path("#about", views.about, name="about"),  
+    # path("#about", views.about, name="about"),  
+    path("#", views.portfolio_details, name="portfolio_details"),  
+    path("py_scripts/", views.py_scripts, name="py_scripts"),
 ]
