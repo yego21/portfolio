@@ -8,9 +8,21 @@ buttons.forEach(button => {
     if (activeIframeId !== iframeId) {
       hideActiveIframe();
       showIframe(iframeId);
+      activateButtonsWithIframeId(iframeId);
     }
   });
 });
+
+function activateButtonsWithIframeId(iframeId) {
+  buttons.forEach(button => {
+    const buttonIframeId = button.getAttribute('data-iframe-id');
+    if (buttonIframeId === iframeId) {
+      button.classList.add('green-underline-button-active'); // Add an active class to buttons with matching iframeId
+    } else {
+      button.classList.remove('green-underline-button-active'); // Remove the active class from other buttons
+    }
+  });
+}
 
 function showIframe(iframeId) {
   const iframeToShow = document.getElementById(iframeId);
